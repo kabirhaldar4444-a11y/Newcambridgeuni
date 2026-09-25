@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "node dev-server.js",
     "start": "node dev-server.js"
+  },
+  "dependencies": {
+    "youtubei.js": "^18.1.0"
   }
 }

@@ -15,12 +15,15 @@
        Premium Policy Page Header & Elements
        ========================================================================== */
     .policy-page-hero {
-      background: linear-gradient(135deg, #0b1a2c 0%, #15293e 60%, #1e3a57 100%);
+      background: 
+        linear-gradient(135deg, rgba(8, 20, 36, 0.88) 0%, rgba(14, 29, 48, 0.80) 50%, rgba(20, 40, 64, 0.88) 100%),
+        url('assets/bg-refund.jpg') center 40%/cover no-repeat;
       color: #ffffff;
-      padding: 44px 0 36px;
+      padding: 52px 0 40px;
       border-bottom: 3px solid var(--cambridge-red, #B31B1B);
       position: relative;
       overflow: hidden;
+      box-shadow: inset 0 -30px 40px -20px rgba(0, 0, 0, 0.5);
     }
 
     .policy-page-hero::after {
@@ -28,10 +31,15 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 400px;
+      width: 450px;
       height: 100%;
-      background: radial-gradient(circle, rgba(179, 27, 27, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(179, 27, 27, 0.22) 0%, transparent 70%);
       pointer-events: none;
+    }
+
+    .policy-page-hero .container {
+      position: relative;
+      z-index: 2;
     }
 
     .policy-breadcrumb {
@@ -107,8 +115,10 @@
       font-weight: 700;
       text-decoration: none;
       background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       transition: all 0.25s ease;
     }
 
@@ -146,7 +156,6 @@
       padding: 28px 32px;
       margin-bottom: 24px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-      border-left: 5px solid #0f2942;
     }
 
     .terms-section-header, .privacy-card-header, .step-card-header, .policy-header {
@@ -304,15 +313,15 @@
     /* Alerts and Callouts */
     .security-notice-box, .policy-notice-box, .policy-critical-alert {
       background: #fffbeb;
-      border-left: 4px solid #d97706;
+      border: 1px solid #fde68a;
       padding: 16px 20px;
-      border-radius: 6px;
+      border-radius: 8px;
       margin: 18px 0;
     }
 
     .policy-critical-alert {
       background: #fef2f2;
-      border-left-color: #dc2626;
+      border-color: #fca5a5;
       color: #991b1b;
     }
 
@@ -464,13 +473,12 @@
     }
 
     .terms-acceptance-card {
-      border-left: 5px solid #d97706;
       background-color: #fffbeb;
-      border-color: #fde68a;
+      border: 1px solid #fde68a;
     }
 
     .step-card-final {
-      border-left: 5px solid #059669;
+      border: 1px solid #a7f3d0;
       background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
     }
 
@@ -633,16 +641,6 @@
           </div>
         </div>
 
-        <!-- Links Column 1: Policies -->
-        <div class="footer-col policies-col">
-          <h4>Policies</h4>
-          <ul class="footer-links">
-            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="service-delivery.html">Service Delivery</a></li>
-            <li><a href="refund-policy.html">Refund Policy</a></li>
-          </ul>
-        </div>
 
         <!-- Links Column 2: Certificates -->
         <div class="footer-col">
