@@ -1,0 +1,9 @@
+{
+  "name": "newcambridgeuni",
+  "version": "1.0.0",
+  "description": "Cambridge Learning Services Official Website",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
+  }
+}
