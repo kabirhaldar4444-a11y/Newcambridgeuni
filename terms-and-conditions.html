@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Cambridge Learning Services</title>
+  <meta name="description" content="Service Fulfillment & No-Refund Policy. Please read these Terms & Conditions carefully before enrolling in our vocational training programs. Your enrollment implies full, legally binding acceptance of all terms, guidelines, and company policies outlined below.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ==========================================================================
+       Premium Policy Page Header & Elements
+       ========================================================================== */
+    .policy-page-hero {
+      background: linear-gradient(135deg, #0b1a2c 0%, #15293e 60%, #1e3a57 100%);
+      color: #ffffff;
+      padding: 44px 0 36px;
+      border-bottom: 3px solid var(--cambridge-red, #B31B1B);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .policy-page-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100%;
+      background: radial-gradient(circle, rgba(179, 27, 27, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .policy-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .policy-breadcrumb a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .policy-breadcrumb a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .policy-breadcrumb span.sep {
+      color: #64748b;
+    }
+
+    .policy-tag-badge {
+      display: inline-block;
+      background: rgba(179, 27, 27, 0.25);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full, 9999px);
+      margin-bottom: 12px;
+    }
+
+    .policy-hero-title {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .policy-hero-desc {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 860px;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    /* Policy Navigation Tab Pills */
+    .policy-tabs-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .policy-tab-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 20px;
+      border-radius: var(--radius-full, 9999px);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+
+    .policy-tab-link:hover {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .policy-tab-link.active {
+      background: var(--cambridge-red, #B31B1B);
+      border-color: var(--cambridge-red, #B31B1B);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(179, 27, 27, 0.4);
+    }
+
+    /* Content Area Resets */
+    .policy-content-area {
+      background-color: #f8fafc;
+      padding: 44px 0 68px;
+      min-height: 60vh;
+    }
+
+    .terms-container, .privacy-container, .delivery-container, .refund-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Policy Cards & Sections */
+    .terms-section, .privacy-card, .delivery-step-card, .policy-section {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      border-left: 5px solid #0f2942;
+    }
+
+    .terms-section-header, .privacy-card-header, .step-card-header, .policy-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .terms-section-header h3, .privacy-card-header h3, .step-card-header h3, .policy-header h3 {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0f2942;
+      margin: 0;
+    }
+
+    .header-meta {
+      display: block;
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .terms-num-badge, .section-num-badge, .step-badge, .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 10px;
+      background: var(--cambridge-red, #B31B1B);
+      color: #ffffff;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .terms-num-accent {
+      background: #d97706;
+    }
+
+    .badge-danger {
+      background: #dc2626;
+    }
+
+    .step-badge-final {
+      background: #059669;
+    }
+
+    .terms-text-body p, .privacy-card-body p, .step-card-body p, .policy-body p {
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .terms-bullet-list, .styled-list, .policy-bullet-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 16px 0;
+    }
+
+    .terms-bullet-list li, .styled-list li, .policy-bullet-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      color: #334155;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .terms-bullet-list li::before, .styled-list li::before, .policy-bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      color: var(--cambridge-red, #B31B1B);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    /* Step Cards Grid */
+    .protocol-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .protocol-step-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .protocol-step-num {
+      align-self: flex-start;
+      background: #0f2942;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .protocol-step-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    /* Policy Matrix Tables */
+    .policy-table-wrapper {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .policy-matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      background: #ffffff;
+    }
+
+    .policy-matrix-table th {
+      background: #0f2942;
+      color: #ffffff;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .policy-matrix-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .policy-matrix-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    /* Alerts and Callouts */
+    .security-notice-box, .policy-notice-box, .policy-critical-alert {
+      background: #fffbeb;
+      border-left: 4px solid #d97706;
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin: 18px 0;
+    }
+
+    .policy-critical-alert {
+      background: #fef2f2;
+      border-left-color: #dc2626;
+      color: #991b1b;
+    }
+
+    .notice-tag, .notice-title {
+      font-weight: 700;
+      display: inline-block;
+      color: #b45309;
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Flowchart */
+    .flowchart-wrap {
+      background: #f1f5f9;
+      padding: 24px;
+      border-radius: 10px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .flowchart-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flowchart-node {
+      background: #0f2942;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .flowchart-arrow {
+      font-size: 1.25rem;
+      color: var(--cambridge-red, #B31B1B);
+      font-weight: 800;
+    }
+
+    .flowchart-vertical-down {
+      font-size: 1.25rem;
+      color: var(--cambridge-red, #B31B1B);
+    }
+
+    .privacy-notice-bar {
+      background: #0f2942;
+      color: #e2e8f0;
+      padding: 14px 0;
+      margin-bottom: 28px;
+      border-radius: 8px;
+    }
+
+    .notice-inner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      padding: 0 16px;
+    }
+
+    .notice-icon {
+      color: #ef4444;
+      flex-shrink: 0;
+    }
+
+    .data-sub-block {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .highlight-sub-block {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .sub-block-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .sub-block-header h4 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #0f2942;
+    }
+
+    .sub-tag {
+      background: #0f2942;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .tag-warning {
+      background: #d97706;
+    }
+
+    .use-grid, .safeguards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .use-item, .safeguard-card {
+      display: flex;
+      gap: 14px;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .use-icon-wrap, .safeguard-icon {
+      color: var(--cambridge-red, #B31B1B);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .use-item h5, .safeguard-card h5 {
+      margin: 0 0 4px 0;
+      font-size: 0.98rem;
+      color: #0f2942;
+    }
+
+    .use-item p, .safeguard-card p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .terms-acceptance-card {
+      border-left: 5px solid #d97706;
+      background-color: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .step-card-final {
+      border-left: 5px solid #059669;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    @media (max-width: 768px) {
+      .policy-hero-title {
+        font-size: 1.85rem;
+      }
+      .terms-section, .privacy-card, .delivery-step-card, .policy-section {
+        padding: 20px 16px;
+      }
+      .use-grid, .safeguards-grid, .protocol-steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Announcement Promo Banner -->
+  <div class="promo-banner" id="promoBanner">
+    <div class="container banner-flex">
+      <div class="banner-content">
+        <span class="badge-discount">OFFICIAL PORTAL</span>
+        <span>Cambridge Learning Services &bull; <strong>100+ Professional Certifications</strong> Accessible 100% Online</span>
+      </div>
+      <div class="banner-right">
+        <a href="index.html#programFinderSection" class="banner-cta">Explore Programs &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Cambridge Learning Services Homepage">
+        <img src="assets/cambridge-logo.png" alt="Cambridge Learning Services" class="logo-svg" width="220" height="59">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <!-- Programs Mega Menu -->
+          <li class="nav-item has-dropdown">
+            <a href="index.html#programFinderSection" class="nav-link" onclick="scrollToSection('programFinderSection')">
+              Programs
+              <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-col">
+                  <div class="mega-heading">Technical & Management Disciplines</div>
+                  <ul class="mega-links">
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('all', event)"><span class="link-icon">🎓</span> All Certifications (100)</a></li>
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('ai-and-modern-workflows', event)"><span class="link-icon">🤖</span> AI & Modern Workflows (15)</a></li>
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('construction-project-management-and-billing', event)"><span class="link-icon">🏗️</span> Construction: PM & Billing (13)</a></li>
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('construction-site-operations-and-safety', event)"><span class="link-icon">🦺</span> Construction: Site Operations (12)</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <div class="mega-heading">Engineering & Operations</div>
+                  <ul class="mega-links">
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('construction-design-coordination-and-bim', event)"><span class="link-icon">📐</span> Design Coordination & BIM (11)</a></li>
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('construction-materials-finishes-and-tech', event)"><span class="link-icon">🧱</span> Materials, Finishes & Tech (14)</a></li>
+                    <li><a href="index.html#programFinderSection" onclick="filterAndScrollToCategory('corporate-operations-and-logistics', event)"><span class="link-icon">📦</span> Corporate Operations & Logistics (35)</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col featured-offering">
+                  <div class="mega-heading">Featured Masterclass</div>
+                  <div class="featured-card">
+                    <span class="badge-featured">POPULAR</span>
+                    <h4>Generative AI Prompt Engineering</h4>
+                    <p>Accelerated 20 Days vocational masterclass in Generative AI for enterprise workflows.</p>
+                    <a href="javascript:void(0)" class="link-arrow" onclick="openProgramModal('generative-ai-prompt-engineering-for-enterprise-workflows', event)">Explore Syllabus &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Enterprise Menu -->
+          <li class="nav-item">
+            <a href="index.html#enterpriseSection" class="nav-link">Enterprise</a>
+          </li>
+
+          <!-- Keynotes -->
+          <li class="nav-item">
+            <a href="index.html#keynotesSection" class="nav-link">Keynotes & Events</a>
+          </li>
+
+          <!-- How It Works -->
+          <li class="nav-item">
+            <a href="index.html#howItWorksSection" class="nav-link">How It Works</a>
+          </li>
+
+          <!-- Impact -->
+          <li class="nav-item">
+            <a href="index.html#impactSection" class="nav-link">Impact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <a href="index.html#requestInfoSection" class="btn-primary-header">Request Info</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Header Banner with Title & Quick Tabs -->
+  <section class="policy-page-hero">
+    <div class="container">
+      <nav class="policy-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="terms-and-conditions.html">Policies</a>
+        <span class="sep">/</span>
+        <span>Terms & Conditions</span>
+      </nav>
+
+      <span class="policy-tag-badge">Legal & Governance Framework</span>
+      <h1 class="policy-hero-title">Terms & Conditions</h1>
+      <p class="policy-hero-desc">Service Fulfillment & No-Refund Policy. Please read these Terms & Conditions carefully before enrolling in our vocational training programs. Your enrollment implies full, legally binding acceptance of all terms, guidelines, and company policies outlined below.</p>
+
+      <!-- Policy Switcher Tabs -->
+      <div class="policy-tabs-bar">
+        <a href="terms-and-conditions.html" class="policy-tab-link active">Terms & Conditions</a>
+        <a href="privacy-policy.html" class="policy-tab-link ">Privacy Policy</a>
+        <a href="service-delivery.html" class="policy-tab-link ">Service Delivery</a>
+        <a href="refund-policy.html" class="policy-tab-link ">Refund Policy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Body Content -->
+  <main class="policy-content-area" role="main">
+    <div class="terms-page"><section id="" class="section  "><div class="container"><div class="terms-container flex-column gap-xl animate-fade-in"><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">1</span><h3>Scope of Independent Vocational Services</h3></div><div class="terms-text-body"><p>By completing a commercial transaction and registering for any training program on Cambridge Learning Services (<a href="https://cambridgelearningservices.org" target="_blank" rel="noopener noreferrer">https://cambridgelearningservices.org</a>), the user (hereinafter referred to as the <strong>"Student"</strong> or <strong>"Client"</strong>) explicitly acknowledges and agrees that all services rendered are independent, skill-based vocational training programs.</p><p>Cambridge Learning Services functions strictly as an asynchronous educational infrastructure platform. Our programs are non-degree, non-diploma courses and explicitly do not require or maintain any affiliation, accreditation, or licensing from any university, government institute, or private educational board. Cambridge Learning Services grants institutional "Certificates of Completion" and "Provisional Certificates" based solely on independent competency assessments.</p></div></div><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">2</span><h3>Asynchronous Delivery Model & Anti-Interactive Clauses</h3></div><div class="terms-text-body"><p>The Client explicitly understands and accepts that Cambridge Learning Services operates on a static digital distribution model:</p><ul class="terms-bullet-list"><li><strong>Exclusivity of Medium:</strong> Training is delivered solely and exclusively via pre-recorded, asynchronous video lecture modules and downloadable PDF text study workbooks.</li><li><strong>Prohibition of Live Training:</strong> Cambridge Learning Services never offers, promises, or provides any person-to-person instruction, live classroom training, group webinars, real-time mentorship, or interactive tutor sessions.</li><li><strong>Self-Directed Operational Responsibility:</strong> The Student bears absolute responsibility for navigating the course materials independently within the platform’s self-contained hosting framework. No claims for refunds based on the lack of live human interaction will be entertained under any circumstances, as the platform explicitly disclaims interactive training.</li></ul></div></div><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">3</span><h3>Strict 9-Step Service Delivery Protocol & Binding Benchmarks</h3></div><div class="terms-text-body"><p>Fulfillment of the purchase contract is systematically tracked and verified by our backend architecture across nine sequential milestones. By enrolling, the Student agrees to comply with the operational conditions of each step:</p><div class="protocol-steps-grid"><div class="protocol-step-item"><div class="protocol-step-num">Step 1</div><div class="protocol-step-content"><strong>Admission Confirmation After Payment:</strong> Triggered instantly upon payment gateway clearance. This marks the commencement of the digital contractual relationship.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 2</div><div class="protocol-step-content"><strong>Mandatory Document KYC:</strong> The Student must securely upload valid government-issued photo identification to verify their profile. Failure to provide legitimate documentation within the course timeframe will result in account suspension without a refund.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 3</div><div class="protocol-step-content"><strong>Mandatory Video KYC Authentication:</strong> A biometric video check must be recorded by the student to verify identity, eliminate fraud, and prevent proxy test-taking. Accounts failing the security profile checks are immediately locked to preserve system integrity.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 4</div><div class="protocol-step-content"><strong>GST Invoice Delivery:</strong> A legally compliant Corporate GST Invoice is compiled and posted to the student's dashboard within 24 hours of successful validation.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 5</div><div class="protocol-step-content"><strong>PDF Study Material Dissemination (Strict One-Time Release Clauses):</strong> Comprehensive text materials are unlocked inside the student portal. The Client acknowledges that files are shared on a strict one-time basis only. The Student bears the full legal and technical responsibility to securely save, download, and backup these digital assets immediately upon distribution. Cambridge Learning Services completely denies any liability for file loss, hardware failure, or requests for link refreshes post-distribution.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 6</div><div class="protocol-step-content"><strong>Enrollment Certificate Issuance:</strong> A digital record reflecting that the individual is actively under training within our independent boot camp is instantly generated and delivered.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 7</div><div class="protocol-step-content"><strong>Video Lecture Access Provisioning (Strict One-Time Release Clauses):</strong> Pre-recorded training paths are made accessible to the profile workspace. Like the text files, access keys to the video streams are delivered on a strict one-time basis only. Account sharing, profile splitting, or data scraping are prohibited and will trigger automated account bans without a refund.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 8</div><div class="protocol-step-content"><strong>Final Examination Login Credentials:</strong> Upon expiration of the designated course duration (10, 20, or 30 days maximum), encrypted examination keys are assigned to the portal.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 9</div><div class="protocol-step-content"><strong>Final Exam Grading & Provisional Certificate (PC) Delivery:</strong> Upon submission, grading engines compute results instantly, and a provisional credential is issued to close the service loop.</div></div></div></div></div><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">4</span><h3>Defatigability of Services & Definitive "No-Refund" Policy</h3></div><div class="terms-text-body"><p>Cambridge Learning Services distributes high-value, proprietary digital intellectual property. Due to the digital nature of these assets—which can be instantly viewed, saved, or downloaded upon release—all transactions executed on <a href="https://cambridgelearningservices.org" target="_blank" rel="noopener noreferrer">https://cambridgelearningservices.org</a> are strictly <strong>FINAL, NON-CANCELLABLE, AND NON-REFUNDABLE</strong>.</p><ul class="terms-bullet-list"><li><strong>Instant Fulfillment Waiver:</strong> The moment Step 1 (Admission Confirmation) is triggered and Step 5 (PDF Study Material Dissemination) is executed, the platform has fully performed its digital delivery obligations. The Client explicitly waives any right to an operational "cooling-off period" or transaction cancellation.</li><li><strong>The "One-Time Sharing" Indemnification:</strong> The Client agrees that the execution of the "Strict One-Time Release" protocols for reading materials and video access provides definitive structural proof of service completion. The platform is completely indemnified against student complaints regarding data loss, user error, or platform lockouts resulting from a breach of user rules.</li><li><strong>KYC Refusal Forfeiture:</strong> If a user refuses to complete Step 2 (Document KYC) or Step 3 (Video KYC), or if they deliberately upload false data to bypass identification, the account will be permanently banned for a security breach. In such scenarios, all paid registration fees are entirely forfeited to cover administrative processing costs, and no refund claims will be honored.</li><li><strong>Chargeback & Dispute Mitigation:</strong> Any attempt by the Client to file an unauthorized transaction dispute, credit card chargeback, or digital payment reversal claim by misrepresenting our 9-step process will be legally treated as a breach of contract. Cambridge Learning Services will immediately submit this binding Terms and Conditions policy, along with backend server log data tracking successful file distribution, to the relevant financial institution to aggressively deny the claim.</li></ul><div class="policy-table-wrapper"><table class="policy-matrix-table"><thead><tr><th style="width:25%">Policy Provision</th><th style="width:35%">Description & Execution Threshold</th><th style="width:40%">Legal Impact on Client</th></tr></thead><tbody><tr><td><strong>Instant Fulfillment Waiver</strong></td><td>Triggered immediately upon Step 1 (Payment Clearance) and Step 5 (PDF Study Material Dissemination).</td><td>The Client <strong>explicitly waives any right to an operational "cooling-off period"</strong> or transaction cancellation once assets are deployed.</td></tr><tr><td><strong>One-Time Sharing Indemnification</strong></td><td>Established upon execution of the "Strict One-Time Release" protocols in Step 5 and Step 7.</td><td>The platform is <strong>completely indemnified</strong> against student complaints regarding data loss, user error, device incompatibility, or platform lockouts resulting from a breach of user rules.</td></tr><tr><td><strong>KYC Refusal Forfeiture</strong></td><td>Triggered if a user refuses or fails Step 2 (Document KYC) or Step 3 (Video KYC).</td><td>The user's account will be permanently banned for a security breach. <strong>All paid registration fees are entirely forfeited</strong> to cover administrative processing costs.</td></tr><tr><td><strong>Dispute & Chargeback Mitigation</strong></td><td>Triggered when a client files a dispute, credit card chargeback, or payment reversal claim.</td><td>Treated legally as a <strong>breach of contract</strong>. The platform will submit this policy and server logs to banks to <strong>aggressively deny the claim</strong>.</td></tr></tbody></table></div></div></div><div class="terms-section terms-acceptance-card"><div class="terms-section-header"><span class="terms-num-badge terms-num-accent">5</span><h3>Acceptance of Terms</h3></div><div class="terms-text-body"><p style="font-weight:600;color:#0f2942">By scrolling past this screen, clicking "I Agree," or processing a training fee payment on our network domains, you explicitly declare that you have read, understood, and agreed to be legally bound by this Service Delivery Framework and No-Refund Policy. If you do not accept these asynchronous, un-affiliated delivery constraints, you must exit our platform immediately and refrain from purchasing any services.</p></div></div></div></div></section></div>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="main-footer" id="mainFooter">
+    <div class="container footer-content-wrap">
+      <div class="footer-top-row">
+        
+        <!-- Brand & Seal Column -->
+        <div class="footer-col brand-col">
+          <div class="footer-logos">
+            <img src="assets/cambridge-seal.svg" alt="Cambridge Learning Services Seal" class="footer-seal" width="44" height="44">
+            <img src="assets/cambridge-logo-white.png" alt="Cambridge Learning Services" class="footer-logo" width="190" height="51">
+          </div>
+          <p class="footer-motto">
+            "Empowering professionals and global organizations through world-class industry credentials."
+            <br><span class="motto-author">— Cambridge Learning Services</span>
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Policies -->
+        <div class="footer-col policies-col">
+          <h4>Policies</h4>
+          <ul class="footer-links">
+            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="service-delivery.html">Service Delivery</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Certificates -->
+        <div class="footer-col">
+          <h4>Cambridge & Online Certifications</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#programFinderSection">AI & Modern Workflows (15)</a></li>
+            <li><a href="index.html#programFinderSection">Construction PM & Billing (13)</a></li>
+            <li><a href="index.html#programFinderSection">Site Operations & Safety (12)</a></li>
+            <li><a href="index.html#programFinderSection">Design Coordination & BIM (11)</a></li>
+            <li><a href="index.html#programFinderSection">Materials, Finishes & Tech (14)</a></li>
+            <li><a href="index.html#programFinderSection">Corporate Operations & Logistics (35)</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Support -->
+        <div class="footer-col contact-col">
+          <h4>Contact Admissions</h4>
+          <div class="contact-entry">
+            <span class="entry-label">Toll-Free (US):</span>
+            <a href="tel:18663267635" class="entry-val">866-326-7635</a>
+          </div>
+          <div class="contact-entry">
+            <span class="entry-label">International:</span>
+            <a href="tel:16073303200" class="entry-val">+1-607-330-3200</a>
+          </div>
+          <div class="contact-entry">
+            <span class="entry-label">Email:</span>
+            <a href="mailto:admissions@cambridgelearningservices.org" class="entry-val">admissions@cambridgelearningservices.org</a>
+          </div>
+          <div class="contact-entry address-entry">
+            <span class="entry-label">Headquarters:</span>
+            <address>
+              950 Danby Rd., Suite 150<br>
+              Ithaca, NY 14850
+            </address>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Legal -->
+      <div class="footer-bottom-row">
+        <div class="legal-links">
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <span class="sep">|</span>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span class="sep">|</span>
+          <a href="service-delivery.html">Service Delivery</a>
+          <span class="sep">|</span>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <p class="copyright-notice">
+          &copy; 2026 Cambridge Learning Services. All rights reserved. Delivering globally recognized professional certifications.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
