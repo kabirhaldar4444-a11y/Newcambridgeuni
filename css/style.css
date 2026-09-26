@@ -685,12 +685,13 @@ button {
   background: transparent;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateY(14px);
   display: flex;
   align-items: center;
   pointer-events: none;
   z-index: 2;
+  overflow: hidden;
 }
 
 .carousel-slide.active {
@@ -701,46 +702,32 @@ button {
   z-index: 4;
 }
 
-/* Continuous Ambient Background Video for Hero Section */
-.hero-video-bg {
+/* Background Image & Overlay for Hero Slides (Replaces Video) */
+.hero-slide-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
   z-index: 1;
   pointer-events: none;
+  transition: transform 6s ease-out;
+  transform: scale(1.08);
 }
 
-.hero-video-iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* High-DPI viewport sizing to force 1080p stream and push all YouTube chrome offscreen */
-  width: 140vw;
-  height: 78.75vw;
-  min-height: 140%;
-  min-width: 248.89vh;
-  transform: translate(-50%, -50%);
-  border: none;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.8s ease;
+.carousel-slide.active .hero-slide-bg {
+  transform: scale(1);
 }
 
-.hero-video-bg.is-loaded .hero-video-iframe {
-  opacity: 1;
-}
-
-.hero-video-overlay {
+.hero-slide-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(11, 21, 35, 0.62) 0%,
-    rgba(15, 23, 42, 0.35) 50%,
-    rgba(11, 21, 35, 0.68) 100%
+    rgba(11, 21, 35, 0.78) 0%,
+    rgba(15, 23, 42, 0.58) 50%,
+    rgba(11, 21, 35, 0.82) 100%
   );
   z-index: 2;
   pointer-events: none;
@@ -3036,3 +3023,488 @@ button {
   .categories-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Policy Pages Styling */
+/* ==========================================================================
+       Premium Policy Page Header & Elements
+       ========================================================================== */
+    .policy-page-hero {
+      background: 
+        linear-gradient(135deg, rgba(7, 18, 32, 0.88) 0%, rgba(12, 26, 44, 0.80) 50%, rgba(18, 38, 62, 0.88) 100%),
+        url('assets/bg-privacy.jpg') center 40%/cover no-repeat;
+      color: #ffffff;
+      padding: 52px 0 40px;
+      border-bottom: 3px solid var(--cambridge-red, #B31B1B);
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 -30px 40px -20px rgba(0, 0, 0, 0.5);
+    }
+
+    .policy-page-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 450px;
+      height: 100%;
+      background: radial-gradient(circle, rgba(179, 27, 27, 0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .policy-page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .policy-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .policy-breadcrumb a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .policy-breadcrumb a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .policy-breadcrumb span.sep {
+      color: #64748b;
+    }
+
+    .policy-tag-badge {
+      display: inline-block;
+      background: rgba(179, 27, 27, 0.25);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full, 9999px);
+      margin-bottom: 12px;
+    }
+
+    .policy-hero-title {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .policy-hero-desc {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 860px;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    /* Policy Navigation Tab Pills */
+    .policy-tabs-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .policy-tab-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 20px;
+      border-radius: var(--radius-full, 9999px);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      transition: all 0.25s ease;
+    }
+
+    .policy-tab-link:hover {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .policy-tab-link.active {
+      background: var(--cambridge-red, #B31B1B);
+      border-color: var(--cambridge-red, #B31B1B);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(179, 27, 27, 0.4);
+    }
+
+    /* Content Area Resets */
+    .policy-content-area {
+      background-color: #f8fafc;
+      padding: 44px 0 68px;
+      min-height: 60vh;
+    }
+
+    .terms-container, .privacy-container, .delivery-container, .refund-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Policy Cards & Sections */
+    .terms-section, .privacy-card, .delivery-step-card, .policy-section {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .terms-section-header, .privacy-card-header, .step-card-header, .policy-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .terms-section-header h3, .privacy-card-header h3, .step-card-header h3, .policy-header h3 {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0f2942;
+      margin: 0;
+    }
+
+    .header-meta {
+      display: block;
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .terms-num-badge, .section-num-badge, .step-badge, .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 10px;
+      background: var(--cambridge-red, #B31B1B);
+      color: #ffffff;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .terms-num-accent {
+      background: #d97706;
+    }
+
+    .badge-danger {
+      background: #dc2626;
+    }
+
+    .step-badge-final {
+      background: #059669;
+    }
+
+    .terms-text-body p, .privacy-card-body p, .step-card-body p, .policy-body p {
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .terms-bullet-list, .styled-list, .policy-bullet-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 16px 0;
+    }
+
+    .terms-bullet-list li, .styled-list li, .policy-bullet-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      color: #334155;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .terms-bullet-list li::before, .styled-list li::before, .policy-bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      color: var(--cambridge-red, #B31B1B);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    /* Step Cards Grid */
+    .protocol-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .protocol-step-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .protocol-step-num {
+      align-self: flex-start;
+      background: #0f2942;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .protocol-step-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    /* Policy Matrix Tables */
+    .policy-table-wrapper {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .policy-matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      background: #ffffff;
+    }
+
+    .policy-matrix-table th {
+      background: #0f2942;
+      color: #ffffff;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .policy-matrix-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .policy-matrix-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    /* Alerts and Callouts */
+    .security-notice-box, .policy-notice-box, .policy-critical-alert {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .policy-critical-alert {
+      background: #fef2f2;
+      border-color: #fca5a5;
+      color: #991b1b;
+    }
+
+    .notice-tag, .notice-title {
+      font-weight: 700;
+      display: inline-block;
+      color: #b45309;
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Flowchart */
+    .flowchart-wrap {
+      background: #f1f5f9;
+      padding: 24px;
+      border-radius: 10px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .flowchart-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flowchart-node {
+      background: #0f2942;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .flowchart-arrow {
+      font-size: 1.25rem;
+      color: var(--cambridge-red, #B31B1B);
+      font-weight: 800;
+    }
+
+    .flowchart-vertical-down {
+      font-size: 1.25rem;
+      color: var(--cambridge-red, #B31B1B);
+    }
+
+    .privacy-notice-bar {
+      background: #0f2942;
+      color: #e2e8f0;
+      padding: 14px 0;
+      margin-bottom: 28px;
+      border-radius: 8px;
+    }
+
+    .notice-inner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      padding: 0 16px;
+    }
+
+    .notice-icon {
+      color: #ef4444;
+      flex-shrink: 0;
+    }
+
+    .data-sub-block {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .highlight-sub-block {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .sub-block-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .sub-block-header h4 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #0f2942;
+    }
+
+    .sub-tag {
+      background: #0f2942;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .tag-warning {
+      background: #d97706;
+    }
+
+    .use-grid, .safeguards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .use-item, .safeguard-card {
+      display: flex;
+      gap: 14px;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .use-icon-wrap, .safeguard-icon {
+      color: var(--cambridge-red, #B31B1B);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .use-item h5, .safeguard-card h5 {
+      margin: 0 0 4px 0;
+      font-size: 0.98rem;
+      color: #0f2942;
+    }
+
+    .use-item p, .safeguard-card p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .terms-acceptance-card {
+      background-color: #fffbeb;
+      border: 1px solid #fde68a;
+    }
+
+    .step-card-final {
+      border: 1px solid #a7f3d0;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+
+    @media (max-width: 768px) {
+      .policy-hero-title {
+        font-size: 1.85rem;
+      }
+      .terms-section, .privacy-card, .delivery-step-card, .policy-section {
+        padding: 20px 16px;
+      }
+      .use-grid, .safeguards-grid, .protocol-steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
