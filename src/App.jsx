@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import PromoBanner from './components/PromoBanner';
 import Header from './components/Header';
 import MobileDrawer from './components/MobileDrawer';
 import HeroCarousel from './components/HeroCarousel';
@@ -155,12 +154,6 @@ export default function App() {
 
   return (
     <div className="cambridge-react-app">
-      {/* Promo Ribbon Banner */}
-      <PromoBanner 
-        onShowToast={showToast} 
-        onScrollToSection={scrollToSection} 
-      />
-
       {/* Main Header */}
       <Header
         onScrollToSection={scrollToSection}
