@@ -25,7 +25,6 @@ export default function PromoBanner({ onShowToast, onScrollToSection }) {
     <div id="promoBanner" className="promo-banner" role="region" aria-label="Special Offer">
       <div className="container banner-flex">
         <div className="banner-content">
-          <span className="badge-discount">LIMITED OFFER</span>
           <span>
             Enroll by <strong>September 30</strong> and save <strong>30%</strong> with code{" "}
             <strong className="promo-code" id="promoCodeDisplay">LEARN30</strong>

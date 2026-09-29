@@ -3,31 +3,31 @@ import React, { useState, useEffect } from 'react';
 const TESTIMONIALS = [
   {
     id: 0,
-    avatar: '/assets/avatar-kasey.png',
-    author: 'Kasey M.',
-    title: 'Technology & Engineering Student',
-    quote: '“Cambridge Learning Services gave me the confidence I needed to take a seat at the table and say: <strong>I’m ready.</strong>”'
+    avatar: '/assets/avatar-indian-student.jpg',
+    author: 'Priya S.',
+    title: 'AI & Modern Workflows Student, Mumbai',
+    quote: '\u201cCambridge Learning Services helped me upskill in AI and automation from the comfort of my home. The course content was <strong>world-class and highly practical</strong> for real industry use.\u201d'
   },
   {
     id: 1,
-    avatar: '/assets/avatar-elizabeth.png',
-    author: 'Elizabeth A.',
-    title: 'Diversity & Inclusion Certificate Student',
-    quote: '“What I wanted was something that had an exceptional caliber of professionals and professors, and <strong>Cambridge Learning Services actually gave me that.</strong>”'
+    avatar: '/assets/avatar-indian-male.jpg',
+    author: 'Arjun R.',
+    title: 'Construction Project Management Student, Pune',
+    quote: '\u201cThe BIM and Project Management course gave me the edge I needed to get promoted. <strong>Best career decision I have ever made.</strong> Highly recommended for anyone in the construction sector.\u201d'
   },
   {
     id: 2,
-    avatar: '/assets/avatar-christine.png',
-    author: 'Christine J.',
-    title: 'Hospitality Management Student',
-    quote: '“Cambridge Learning Services was truly one of the <strong>best investments I made in my entire career</strong> and it’s what brought me to where I am now.”'
+    avatar: '/assets/avatar-indian-student2.jpg',
+    author: 'Sneha M.',
+    title: 'Corporate Operations & Logistics Student, Bengaluru',
+    quote: '\u201cI completed the Supply Chain Logistics certification in 20 days while working full-time. The self-paced format was perfect and <strong>Cambridge Learning Services actually delivered what they promised.\u201d</strong>\u201d'
   },
   {
     id: 3,
-    avatar: '/assets/avatar-nicole.png',
-    author: 'Nicole K.',
-    title: 'Senior Manager, Mars Snacking',
-    quote: '“The way the session balanced inspiration with practical advice was impressive. They introduced frameworks that made AI feel accessible rather than abstract. I walked away feeling energized.”'
+    avatar: '/assets/smiling-studentimg.avif',
+    author: 'Rahul K.',
+    title: 'Senior Manager, Tata Consultancy Services, Delhi',
+    quote: '\u201cThe course balanced inspiration with practical frameworks beautifully. AI went from feeling abstract to something I could immediately apply at work. <strong>I walked away feeling truly energized.\u201d</strong>\u201d'
   }
 ];
 
@@ -63,7 +63,7 @@ export default function Testimonials() {
                   <img src={item.avatar} alt={item.author} className="testimonial-avatar" />
                 </div>
                 <div className="stars">★★★★★</div>
-                <blockquote 
+                <blockquote
                   className="testimonial-quote"
                   dangerouslySetInnerHTML={{ __html: item.quote }}
                 />

@@ -120,12 +120,12 @@ export default function Footer({
           <div className="footer-col contact-col">
             <h4>Contact Admissions</h4>
             <div className="contact-entry">
-              <span className="entry-label">Toll-Free (US):</span>
-              <a href="tel:18663267635" className="entry-val">866-326-7635</a>
+              <span className="entry-label">Phone 1:</span>
+              <a href="tel:02241504304" className="entry-val">022-4150-4304</a>
             </div>
             <div className="contact-entry">
-              <span className="entry-label">International:</span>
-              <a href="tel:16073303200" className="entry-val">+1-607-330-3200</a>
+              <span className="entry-label">Phone 2:</span>
+              <a href="tel:02241504305" className="entry-val">022-4150-4305</a>
             </div>
             <div className="contact-entry">
               <span className="entry-label">Email:</span>
@@ -136,19 +136,10 @@ export default function Footer({
             <div className="contact-entry address-entry">
               <span className="entry-label">Headquarters:</span>
               <address>
-                950 Danby Rd., Suite 150<br />
-                Ithaca, NY 14850
+                Office No-244, Tower-T3, Golden I, Sec-Techzone-4,<br />
+                Greater Noida West, Gautambuddha Nagar,<br />
+                Uttar Pradesh – 201306.
               </address>
-            </div>
-            <div className="chat-entry">
-              <button 
-                type="button" 
-                className="btn-inline-chat" 
-                id="btnFooterChat" 
-                onClick={onOpenChat}
-              >
-                💬 Chat Live With Advisor
-              </button>
             </div>
           </div>
 

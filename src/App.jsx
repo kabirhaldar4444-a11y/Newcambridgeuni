@@ -17,7 +17,6 @@ import Footer from './components/Footer';
 import SearchModal from './components/SearchModal';
 import ProgramModal from './components/ProgramModal';
 import VideoModal from './components/VideoModal';
-import ChatWidget from './components/ChatWidget';
 import Toast from './components/Toast';
 import BackToTop from './components/BackToTop';
 import PolicyView from './components/PolicyView';
@@ -46,7 +45,6 @@ export default function App() {
   const [selectedVideoId, setSelectedVideoId] = useState(null);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
   const [preselectedCourse, setPreselectedCourse] = useState('');
 
   // Toast State
@@ -260,7 +258,6 @@ export default function App() {
       <Footer
         onFilterCategory={handleFilterCategory}
         onScrollToSection={scrollToSection}
-        onOpenChat={() => setIsChatOpen(true)}
         onNavigatePolicy={navigatePolicy}
       />
 
@@ -282,12 +279,6 @@ export default function App() {
         onClose={() => setSelectedVideoId(null)}
       />
 
-      {/* Live Chat Widget Simulation */}
-      <ChatWidget
-        isOpen={isChatOpen}
-        onToggle={() => setIsChatOpen((prev) => !prev)}
-        onClose={() => setIsChatOpen(false)}
-      />
 
       {/* Floating Notifications & Controls */}
       <Toast 
