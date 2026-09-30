@@ -117,6 +117,11 @@ export default function MobileDrawer({
               Refund Policy
             </a>
           </li>
+          <li>
+            <a href="/accessibility-statement.html" className="drawer-link" onClick={(e) => handlePolicyClick('accessibility', e)}>
+              Accessibility
+            </a>
+          </li>
         </ul>
 
         <div className="drawer-footer">

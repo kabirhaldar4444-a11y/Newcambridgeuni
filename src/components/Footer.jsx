@@ -47,7 +47,7 @@ export default function Footer({
             </p>
             <div className="footer-social-links">
               <a 
-                href="https://www.linkedin.com/company/cambridge-learning-services/" 
+                href="https://www.linkedin.com/company/cambridge-india-learning-services/?viewAsMember=true" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Cambridge on LinkedIn"
