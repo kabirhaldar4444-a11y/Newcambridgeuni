@@ -29,6 +29,7 @@ export default function App() {
     if (path.includes('refund')) return 'refund';
     if (path.includes('delivery')) return 'delivery';
     if (path.includes('accessibility')) return 'accessibility';
+    if (path.includes('programs')) return 'programs';
     return 'home';
   });
 
@@ -56,18 +57,6 @@ export default function App() {
     }, 4000);
   }, []);
 
-  const scrollToSection = useCallback((sectionId) => {
-    if (currentView !== 'home') {
-      setCurrentView('home');
-      window.history.pushState({}, '', '/');
-      setTimeout(() => {
-        performScroll(sectionId);
-      }, 100);
-    } else {
-      performScroll(sectionId);
-    }
-  }, [currentView]);
-
   const performScroll = (sectionId) => {
     const target = document.getElementById(sectionId);
     if (target) {
@@ -82,6 +71,19 @@ export default function App() {
     }
   };
 
+  const scrollToSection = useCallback((sectionId) => {
+    const target = document.getElementById(sectionId);
+    if (!target) {
+      setCurrentView('home');
+      window.history.pushState({}, '', '/');
+      setTimeout(() => {
+        performScroll(sectionId);
+      }, 120);
+    } else {
+      performScroll(sectionId);
+    }
+  }, []);
+
   const navigatePolicy = useCallback((policyKey) => {
     setCurrentView(policyKey);
     const filenames = {
@@ -92,6 +94,14 @@ export default function App() {
       accessibility: 'accessibility-statement.html'
     };
     window.history.pushState({}, '', `/${filenames[policyKey] || ''}`);
+  }, []);
+
+  const navigatePrograms = useCallback((category = 'all', query = '') => {
+    setCurrentView('programs');
+    setActiveCategory(category || 'all');
+    setSearchQuery(query || '');
+    window.history.pushState({}, '', '/programs');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const navigateHome = useCallback(() => {
@@ -109,11 +119,21 @@ export default function App() {
       else if (path.includes('refund')) setCurrentView('refund');
       else if (path.includes('delivery')) setCurrentView('delivery');
       else if (path.includes('accessibility')) setCurrentView('accessibility');
+      else if (path.includes('programs')) setCurrentView('programs');
       else setCurrentView('home');
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  // Update Page Title based on view
+  useEffect(() => {
+    if (currentView === 'home') {
+      document.title = "Cambridge Learning Services | Online Certifications & Executive Programs";
+    } else if (currentView === 'programs') {
+      document.title = "Course Catalogue (100 Programs) | Cambridge Learning Services";
+    }
+  }, [currentView]);
 
   // Global Keyboard Shortcuts (Cmd+K / Ctrl+K and Escape)
   useEffect(() => {
@@ -161,6 +181,8 @@ export default function App() {
         onOpenProgramModal={(id) => setSelectedProgramId(id)}
         onToggleMobileDrawer={() => setIsMobileDrawerOpen(true)}
         onNavigateHome={navigateHome}
+        onNavigatePrograms={navigatePrograms}
+        currentView={currentView}
       />
 
       {/* Mobile Drawer Navigation */}
@@ -168,35 +190,18 @@ export default function App() {
         isOpen={isMobileDrawerOpen}
         onClose={() => setIsMobileDrawerOpen(false)}
         onScrollToSection={scrollToSection}
-        onSearch={(term) => {
-          setSearchQuery(term);
-          scrollToSection('programFinderSection');
-        }}
+        onSearch={(term) => navigatePrograms('all', term)}
+        onNavigatePrograms={navigatePrograms}
         onNavigatePolicy={navigatePolicy}
       />
 
-      {/* Conditional View: Home Page or Policy Page */}
+      {/* Main Content: Home, Programs, or Policy View */}
       {currentView === 'home' ? (
         <main>
-          {/* Hero Carousel with Relevant Images (NO VIDEO) */}
-          <HeroCarousel onScrollToSection={scrollToSection} />
-
-          {/* Interactive Certificate Finder Bar & Grid */}
-          <ProgramFinder
-            activeCategory={activeCategory}
-            onSelectCategory={setActiveCategory}
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-            sortMode={sortMode}
-            onSortChange={setSortMode}
-            priceFilter={priceFilter}
-            onPriceChange={setPriceFilter}
-            durationFilter={durationFilter}
-            onDurationChange={setDurationFilter}
-            onResetFilters={handleResetFilters}
-            onOpenProgramModal={(id) => setSelectedProgramId(id)}
-            onInquireCourse={handleInquireCourse}
-            onScrollToSection={scrollToSection}
+          {/* Hero Carousel with CTA to Programs (NO VIDEO) */}
+          <HeroCarousel 
+            onScrollToSection={scrollToSection} 
+            onNavigatePrograms={navigatePrograms}
           />
 
           {/* Designed For Impact (6 Pillars) */}
@@ -206,6 +211,7 @@ export default function App() {
           <CategoryGrid 
             onFilterCategory={handleFilterCategory} 
             onScrollToSection={scrollToSection} 
+            onNavigatePrograms={navigatePrograms}
           />
 
           {/* How It Works Showcase */}
@@ -239,6 +245,69 @@ export default function App() {
           {/* Social Impact / Education For All */}
           <ImpactSection />
         </main>
+      ) : currentView === 'programs' ? (
+        <main className="programs-view-page">
+          {/* Programs Dedicated Hero Banner */}
+          <section className="programs-hero-banner" id="programsHeroBanner">
+            <div className="container">
+              <nav className="programs-breadcrumbs" aria-label="Breadcrumb">
+                <button type="button" className="breadcrumb-btn" onClick={navigateHome}>
+                  Home
+                </button>
+                <span className="breadcrumb-divider">/</span>
+                <span className="breadcrumb-active">Programs</span>
+              </nav>
+
+              <div className="programs-banner-inner">
+                <span className="programs-badge-pill">ACADEMIC & VOCATIONAL CATALOGUE</span>
+                <h1 className="programs-heading">Online Certifications & Masterclasses</h1>
+                <p className="programs-lead">
+                  Explore over 100 industry-aligned certificate programs delivered 100% online. Designed by distinguished Cambridge faculty and industry experts for career advancement.
+                </p>
+
+                <div className="programs-key-features">
+                  <div className="feature-pill">
+                    <span className="icon">🎓</span> 100+ Professional Certifications
+                  </div>
+                  <div className="feature-pill">
+                    <span className="icon">⏱️</span> 10 to 30 Days Flexible cohorts
+                  </div>
+                  <div className="feature-pill">
+                    <span className="icon">📜</span> Verifiable Digital Credential
+                  </div>
+                  <div className="feature-pill">
+                    <span className="icon">🤝</span> 1-on-1 Faculty Feedback
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Interactive Certificate Finder Bar & Grid (Course Catalogue) */}
+          <ProgramFinder
+            activeCategory={activeCategory}
+            onSelectCategory={setActiveCategory}
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+            sortMode={sortMode}
+            onSortChange={setSortMode}
+            priceFilter={priceFilter}
+            onPriceChange={setPriceFilter}
+            durationFilter={durationFilter}
+            onDurationChange={setDurationFilter}
+            onResetFilters={handleResetFilters}
+            onOpenProgramModal={(id) => setSelectedProgramId(id)}
+            onInquireCourse={handleInquireCourse}
+            onScrollToSection={scrollToSection}
+          />
+
+          {/* In-page Request Info Form for seamless conversion */}
+          <RequestInfoForm 
+            preselectedCourse={preselectedCourse} 
+            onShowToast={showToast}
+            onNavigatePolicy={navigatePolicy}
+          />
+        </main>
       ) : (
         <PolicyView 
           policyKey={currentView} 
@@ -251,6 +320,7 @@ export default function App() {
       <Footer
         onFilterCategory={handleFilterCategory}
         onScrollToSection={scrollToSection}
+        onNavigatePrograms={navigatePrograms}
         onNavigatePolicy={navigatePolicy}
       />
 

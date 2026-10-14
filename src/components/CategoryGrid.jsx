@@ -45,10 +45,14 @@ const CATEGORY_ITEMS = [
   }
 ];
 
-export default function CategoryGrid({ onFilterCategory, onScrollToSection }) {
+export default function CategoryGrid({ onFilterCategory, onScrollToSection, onNavigatePrograms }) {
   const handleClick = (catId) => {
-    if (onFilterCategory) onFilterCategory(catId);
-    if (onScrollToSection) onScrollToSection('programFinderSection');
+    if (onNavigatePrograms) {
+      onNavigatePrograms(catId);
+    } else {
+      if (onFilterCategory) onFilterCategory(catId);
+      if (onScrollToSection) onScrollToSection('programFinderSection');
+    }
   };
 
   return (
@@ -85,6 +89,34 @@ export default function CategoryGrid({ onFilterCategory, onScrollToSection }) {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Explore All Programs CTA */}
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <button
+            type="button"
+            className="btn-primary"
+            style={{ 
+              padding: '14px 34px', 
+              fontSize: '1rem', 
+              fontWeight: 700, 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              gap: '8px',
+              borderRadius: '8px',
+              boxShadow: '0 4px 14px rgba(179, 27, 27, 0.3)'
+            }}
+            onClick={() => {
+              if (onNavigatePrograms) {
+                onNavigatePrograms('all');
+              } else if (onScrollToSection) {
+                onScrollToSection('programFinderSection');
+              }
+            }}
+          >
+            <span>Explore All 100+ Programs & Syllabi</span>
+            <span>&rarr;</span>
+          </button>
         </div>
       </div>
     </section>

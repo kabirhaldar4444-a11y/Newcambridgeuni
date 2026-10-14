@@ -104,7 +104,7 @@ export default function ProgramFinder({
         <div className="finder-card">
           <div className="finder-header">
             <h2>Find Your Cambridge Certificate Program</h2>
-            <p>Explore over 150 flexible, 100% online certificate programs delivered by Cambridge Learning Services.</p>
+            <p>Explore over 100 flexible, 100% online certificate programs delivered by Cambridge Learning Services.</p>
           </div>
 
           <div className="finder-controls">
@@ -425,14 +425,14 @@ export default function ProgramFinder({
               Showing {filteredCourses.length} of {CAMBRIDGE_CERTIFICATES.length} programs
             </p>
             <a 
-              href="#certificateExploreSection" 
+              href="#programFinderSection" 
               className="btn-browse-all"
               onClick={(e) => {
                 e.preventDefault();
-                onScrollToSection('certificateExploreSection');
+                onResetFilters();
               }}
             >
-              Browse All 150+ Programs &rarr;
+              Reset Filters & View All 100+ Programs &rarr;
             </a>
           </div>
 

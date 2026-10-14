@@ -5,7 +5,9 @@ export default function Header({
   onFilterCategory, 
   onOpenProgramModal, 
   onToggleMobileDrawer,
-  onNavigateHome
+  onNavigateHome,
+  onNavigatePrograms,
+  currentView
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [megaMenuForceHide, setMegaMenuForceHide] = useState(false);
@@ -22,8 +24,12 @@ export default function Header({
     e.preventDefault();
     setMegaMenuForceHide(true);
     setTimeout(() => setMegaMenuForceHide(false), 450);
-    if (onFilterCategory) onFilterCategory(catKey);
-    if (onScrollToSection) onScrollToSection('programFinderSection');
+    if (onNavigatePrograms) {
+      onNavigatePrograms(catKey);
+    } else {
+      if (onFilterCategory) onFilterCategory(catKey);
+      if (onScrollToSection) onScrollToSection('programFinderSection');
+    }
   };
 
   const handleFeaturedClick = (e) => {
@@ -67,11 +73,15 @@ export default function Header({
             {/* Programs Mega Menu */}
             <li className="nav-item has-dropdown">
               <a 
-                href="#programFinderSection" 
-                className="nav-link" 
+                href="/programs" 
+                className={`nav-link ${currentView === 'programs' ? 'active' : ''}`} 
                 onClick={(e) => {
                   e.preventDefault();
-                  onScrollToSection('programFinderSection');
+                  if (onNavigatePrograms) {
+                    onNavigatePrograms('all');
+                  } else {
+                    onScrollToSection('programFinderSection');
+                  }
                 }}
               >
                 Programs
@@ -85,22 +95,22 @@ export default function Header({
                     <div className="mega-heading">Technical & Management Disciplines</div>
                     <ul className="mega-links">
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('all', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('all', e)}>
                           <span className="link-icon">🎓</span> All Certifications (100)
                         </a>
                       </li>
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('ai-and-modern-workflows', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('ai-and-modern-workflows', e)}>
                           <span className="link-icon">🤖</span> AI & Modern Workflows (15)
                         </a>
                       </li>
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('construction-project-management-and-billing', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('construction-project-management-and-billing', e)}>
                           <span className="link-icon">🏗️</span> Construction: PM & Billing (13)
                         </a>
                       </li>
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('construction-site-operations-and-safety', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('construction-site-operations-and-safety', e)}>
                           <span className="link-icon">🦺</span> Construction: Site Operations (12)
                         </a>
                       </li>
@@ -110,17 +120,17 @@ export default function Header({
                     <div className="mega-heading">Engineering & Operations</div>
                     <ul className="mega-links">
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('construction-design-coordination-and-bim', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('construction-design-coordination-and-bim', e)}>
                           <span className="link-icon">📐</span> Design Coordination & BIM (11)
                         </a>
                       </li>
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('construction-materials-finishes-and-tech', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('construction-materials-finishes-and-tech', e)}>
                           <span className="link-icon">🧱</span> Materials, Finishes & Tech (14)
                         </a>
                       </li>
                       <li>
-                        <a href="#programFinderSection" onClick={(e) => handleCategoryClick('corporate-operations-and-logistics', e)}>
+                        <a href="/programs" onClick={(e) => handleCategoryClick('corporate-operations-and-logistics', e)}>
                           <span className="link-icon">📦</span> Corporate Operations & Logistics (35)
                         </a>
                       </li>

@@ -6,8 +6,8 @@ const HERO_SLIDES = [
     tag: "LEARN FROM ANYWHERE",
     title: "Study Anywhere.<br />Become Anything.",
     subtitle: "World-class education designed for working professionals worldwide.",
-    ctaText: "EXPLORE 150+ PROGRAMS",
-    ctaTarget: "certificateExploreSection",
+    ctaText: "EXPLORE 100+ PROGRAMS",
+    ctaTarget: "programs",
     bgImage: "/assets/hero-slide1.jpg"
   },
   {
@@ -34,12 +34,12 @@ const HERO_SLIDES = [
     title: "KNOW IT. DO IT.",
     subtitle: "Master today's most in-demand skills in AI, Data, Strategy, and Leadership.",
     ctaText: "FIND YOUR CERTIFICATE",
-    ctaTarget: "certificateExploreSection",
+    ctaTarget: "programs",
     bgImage: "/assets/hero-slide4.jpg"
   }
 ];
 
-export default function HeroCarousel({ onScrollToSection }) {
+export default function HeroCarousel({ onScrollToSection, onNavigatePrograms }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const totalSlides = HERO_SLIDES.length;
@@ -62,6 +62,20 @@ export default function HeroCarousel({ onScrollToSection }) {
 
   const handleGoTo = (index) => {
     setCurrentSlide(index);
+  };
+
+  const handleCtaClick = (target) => {
+    if (target === 'programs') {
+      if (onNavigatePrograms) {
+        onNavigatePrograms('all');
+      } else if (onScrollToSection) {
+        onScrollToSection('programFinderSection');
+      }
+    } else {
+      if (onScrollToSection) {
+        onScrollToSection(target);
+      }
+    }
   };
 
   return (
@@ -109,7 +123,7 @@ export default function HeroCarousel({ onScrollToSection }) {
                   <button 
                     type="button"
                     className="btn-hero-primary"
-                    onClick={() => onScrollToSection(slide.ctaTarget)}
+                    onClick={() => handleCtaClick(slide.ctaTarget)}
                   >
                     {slide.ctaText}
                   </button>

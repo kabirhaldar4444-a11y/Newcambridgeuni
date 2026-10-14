@@ -5,6 +5,7 @@ export default function MobileDrawer({
   onClose,
   onScrollToSection,
   onSearch,
+  onNavigatePrograms,
   onNavigatePolicy
 }) {
   const [searchValue, setSearchValue] = useState('');
@@ -13,6 +14,16 @@ export default function MobileDrawer({
     e.preventDefault();
     onClose();
     if (onScrollToSection) onScrollToSection(sectionId);
+  };
+
+  const handleProgramsClick = (catId, e) => {
+    e.preventDefault();
+    onClose();
+    if (onNavigatePrograms) {
+      onNavigatePrograms(catId || 'all');
+    } else if (onScrollToSection) {
+      onScrollToSection('programFinderSection');
+    }
   };
 
   const handlePolicyClick = (policyKey, e) => {
@@ -24,8 +35,12 @@ export default function MobileDrawer({
   const handleSearchKeyDown = (e) => {
     if (e.key === 'Enter') {
       onClose();
-      if (onSearch) onSearch(searchValue);
-      if (onScrollToSection) onScrollToSection('programFinderSection');
+      if (onNavigatePrograms) {
+        onNavigatePrograms('all', searchValue);
+      } else {
+        if (onSearch) onSearch(searchValue);
+        if (onScrollToSection) onScrollToSection('programFinderSection');
+      }
     }
   };
 
@@ -63,8 +78,8 @@ export default function MobileDrawer({
 
         <ul className="drawer-nav">
           <li>
-            <a href="#certificateExploreSection" className="drawer-link" onClick={(e) => handleLinkClick('certificateExploreSection', e)}>
-              Online Certificates
+            <a href="/programs" className="drawer-link" onClick={(e) => handleProgramsClick('all', e)}>
+              🎓 All Programs & Certifications
             </a>
           </li>
           <li>
@@ -125,9 +140,13 @@ export default function MobileDrawer({
         </ul>
 
         <div className="drawer-footer">
-          <p>Need admissions help?</p>
-          <a href="tel:18663267635" className="drawer-phone">📞 866-326-7635</a>
-          <a href="tel:+16073303200" className="drawer-phone-intl">Int'l: +1-607-330-3200</a>
+          <p>Admissions & Support</p>
+          <a href="tel:8064178627" className="drawer-phone">📞 8064178627</a>
+          <a href="tel:02241504305" className="drawer-phone-intl">📞 022-4150-4305</a>
+          <div style={{ marginTop: '10px', fontSize: '0.82rem', lineHeight: '1.6' }}>
+            <a href="mailto:info@cambridgelearning.in" style={{ color: '#ffffff', display: 'block' }}>✉️ info@cambridgelearning.in</a>
+            <a href="mailto:support@cambridgelearning.in" style={{ color: '#cbd5e1', display: 'block' }}>✉️ support@cambridgelearning.in</a>
+          </div>
         </div>
       </div>
 

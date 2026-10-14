@@ -3,13 +3,17 @@ import React from 'react';
 export default function Footer({ 
   onFilterCategory, 
   onScrollToSection, 
-  onOpenChat,
+  onNavigatePrograms,
   onNavigatePolicy 
 }) {
   const handleCatClick = (catId, e) => {
     e.preventDefault();
-    if (onFilterCategory) onFilterCategory(catId);
-    if (onScrollToSection) onScrollToSection('programFinderSection');
+    if (onNavigatePrograms) {
+      onNavigatePrograms(catId);
+    } else {
+      if (onFilterCategory) onFilterCategory(catId);
+      if (onScrollToSection) onScrollToSection('programFinderSection');
+    }
   };
 
   const handlePolicyClick = (policyKey, e) => {
@@ -54,26 +58,6 @@ export default function Footer({
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-              <a 
-                href="https://twitter.com/cambridgelearning" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="Cambridge on Twitter"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
-              </a>
-              <a 
-                href="https://www.youtube.com/user/CambridgeLearningServices" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="Cambridge on YouTube"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                 </svg>
               </a>
             </div>
@@ -121,7 +105,7 @@ export default function Footer({
             <h4>Contact Admissions</h4>
             <div className="contact-entry">
               <span className="entry-label">Phone 1:</span>
-              <a href="tel:02241504304" className="entry-val">022-4150-4304</a>
+              <a href="tel:8064178627" className="entry-val">8064178627</a>
             </div>
             <div className="contact-entry">
               <span className="entry-label">Phone 2:</span>
@@ -129,8 +113,14 @@ export default function Footer({
             </div>
             <div className="contact-entry">
               <span className="entry-label">Email:</span>
-              <a href="mailto:admissions@cambridgelearningservices.org" className="entry-val">
-                admissions@cambridgelearningservices.org
+              <a href="mailto:info@cambridgelearning.in" className="entry-val">
+                info@cambridgelearning.in
+              </a>
+            </div>
+            <div className="contact-entry">
+              <span className="entry-label">Support:</span>
+              <a href="mailto:support@cambridgelearning.in" className="entry-val">
+                support@cambridgelearning.in
               </a>
             </div>
             <div className="contact-entry address-entry">

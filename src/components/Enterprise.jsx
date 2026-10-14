@@ -24,8 +24,8 @@ export default function Enterprise({ onScrollToSection }) {
               >
                 Connect With Corporate Team
               </button>
-              <a href="tel:18663267635" className="btn-trans-phone">
-                📞 866-326-7635
+              <a href="tel:8064178627" className="btn-trans-phone">
+                📞 8064178627
               </a>
             </div>
           </div>
