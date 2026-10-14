@@ -145,7 +145,7 @@ export default function MobileDrawer({
           <a href="tel:02241504305" className="drawer-phone-intl">📞 022-4150-4305</a>
           <div style={{ marginTop: '10px', fontSize: '0.82rem', lineHeight: '1.6' }}>
             <a href="mailto:info@cambridgelearning.in" style={{ color: '#ffffff', display: 'block' }}>✉️ info@cambridgelearning.in</a>
-            <a href="mailto:support@cambridgelearning.in" style={{ color: '#cbd5e1', display: 'block' }}>✉️ support@cambridgelearning.in</a>
+            <a href="mailto:care@cambridgelearning.in" style={{ color: '#cbd5e1', display: 'block' }}>✉️ care@cambridgelearning.in</a>
           </div>
         </div>
       </div>

@@ -48,7 +48,7 @@ export const POLICY_DATA = {
       },
       {
         title: "Legal details",
-        html: "<p>To the maximum extent allowed by law, we are not responsible for indirect or opportunity losses or problems caused by your device, internet service or breach of these rules. Any permitted liability cap is the amount paid for the affected course.</p><p>These rules are governed by the laws of India, and any legal proceedings shall be subject to the exclusive jurisdiction of the competent courts in Gautam Buddha Nagar, Uttar Pradesh. Contact our admissions and support team at <a href=\"mailto:support@cambridgelearning.in\">support@cambridgelearning.in</a> or call 8064178627 / 022-4150-4305 before starting a formal dispute so we can review the account and delivery record.</p>"
+        html: "<p>To the maximum extent allowed by law, we are not responsible for indirect or opportunity losses or problems caused by your device, internet service or breach of these rules. Any permitted liability cap is the amount paid for the affected course.</p><p>These rules are governed by the laws of India, and any legal proceedings shall be subject to the exclusive jurisdiction of the competent courts in Gautam Buddha Nagar, Uttar Pradesh. Contact our admissions and support team at <a href=\"mailto:care@cambridgelearning.in\">care@cambridgelearning.in</a> or call 8064178627 / 022-4150-4305 before starting a formal dispute so we can review the account and delivery record.</p>"
       }
     ]
   },
@@ -63,7 +63,7 @@ export const POLICY_DATA = {
     sections: [
       {
         title: "Who handles your data",
-        html: "<p><strong>Cambridge Learning Services</strong> (Office No-244, Tower-T3, Golden I, Sec-Techzone-4, Greater Noida West, Gautambuddha Nagar, Uttar Pradesh – 201306, India) decides how personal information is used for this learning service. Questions and privacy requests can be sent to <a href=\"mailto:info@cambridgelearning.in\">info@cambridgelearning.in</a> or <a href=\"mailto:support@cambridgelearning.in\">support@cambridgelearning.in</a>.</p>"
+        html: "<p><strong>Cambridge Learning Services</strong> (Office No-244, Tower-T3, Golden I, Sec-Techzone-4, Greater Noida West, Gautambuddha Nagar, Uttar Pradesh – 201306, India) decides how personal information is used for this learning service. Questions and privacy requests can be sent to <a href=\"mailto:info@cambridgelearning.in\">info@cambridgelearning.in</a> or <a href=\"mailto:care@cambridgelearning.in\">care@cambridgelearning.in</a>.</p>"
       },
       {
         title: "Information you give us",
@@ -118,7 +118,7 @@ export const POLICY_DATA = {
       },
       {
         title: "If something interrupts access",
-        html: "<p>Maintenance, risk reviews or a security incident may temporarily pause delivery. For a material interruption caused by us, we can re-enable a stage, extend the window or provide another proportionate remedy.</p><p>Contact our support desk at <a href=\"mailto:support@cambridgelearning.in\">support@cambridgelearning.in</a> or call 8064178627 / 022-4150-4305 with your order number. For your safety, upload identity files only through the approved secure route.</p>"
+        html: "<p>Maintenance, risk reviews or a security incident may temporarily pause delivery. For a material interruption caused by us, we can re-enable a stage, extend the window or provide another proportionate remedy.</p><p>Contact our support desk at <a href=\"mailto:care@cambridgelearning.in\">care@cambridgelearning.in</a> or call 8064178627 / 022-4150-4305 with your order number. For your safety, upload identity files only through the approved secure route.</p>"
       },
       {
         title: "When fulfilment is complete",
@@ -153,7 +153,7 @@ export const POLICY_DATA = {
       },
       {
         title: "How to ask",
-        html: "<p>Contact admissions support at <a href=\"mailto:support@cambridgelearning.in\">support@cambridgelearning.in</a> or <a href=\"mailto:info@cambridgelearning.in\">info@cambridgelearning.in</a> within 7 calendar days of enrollment (prior to accessing or downloading protected course materials). Provide the order number, learner email, payment date and clear evidence of the problem. Do not send full card details, passwords or raw KYC files.</p>"
+        html: "<p>Contact admissions support at <a href=\"mailto:care@cambridgelearning.in\">care@cambridgelearning.in</a> or <a href=\"mailto:info@cambridgelearning.in\">info@cambridgelearning.in</a> within 7 calendar days of enrollment (prior to accessing or downloading protected course materials). Provide the order number, learner email, payment date and clear evidence of the problem. Do not send full card details, passwords or raw KYC files.</p>"
       },
       {
         title: "What happens next",
@@ -192,7 +192,7 @@ export const POLICY_DATA = {
       },
       {
         title: "Feedback, requests & accessibility support",
-        html: "<p>If you encounter an accessibility barrier or require course materials in an alternative format, please contact our support team at <a href=\"mailto:support@cambridgelearning.in\">support@cambridgelearning.in</a> or call 8064178627 / 022-4150-4305. Please describe the issue encountered, including the webpage or resource and assistive software used, so we can assist you promptly.</p>"
+        html: "<p>If you encounter an accessibility barrier or require course materials in an alternative format, please contact our support team at <a href=\"mailto:care@cambridgelearning.in\">care@cambridgelearning.in</a> or call 8064178627 / 022-4150-4305. Please describe the issue encountered, including the webpage or resource and assistive software used, so we can assist you promptly.</p>"
       }
     ]
   }
@@ -267,7 +267,7 @@ function buildPolicyHTML(id) {
           ${sections}
           <div class="legal-note">
             <b>Platform Governance</b>
-            <p>Official policy framework of Cambridge Learning Services. For compliance questions or formal communications, contact our admissions and legal governance desk at <a href="mailto:info@cambridgelearning.in">info@cambridgelearning.in</a> or <a href="mailto:support@cambridgelearning.in">support@cambridgelearning.in</a>.</p>
+            <p>Official policy framework of Cambridge Learning Services. For compliance questions or formal communications, contact our admissions and legal governance desk at <a href="mailto:info@cambridgelearning.in">info@cambridgelearning.in</a> or <a href="mailto:care@cambridgelearning.in">care@cambridgelearning.in</a>.</p>
           </div>
         </article>
       </div>

@@ -119,8 +119,8 @@ export default function Footer({
             </div>
             <div className="contact-entry">
               <span className="entry-label">Support:</span>
-              <a href="mailto:support@cambridgelearning.in" className="entry-val">
-                support@cambridgelearning.in
+              <a href="mailto:care@cambridgelearning.in" className="entry-val">
+                care@cambridgelearning.in
               </a>
             </div>
             <div className="contact-entry address-entry">
