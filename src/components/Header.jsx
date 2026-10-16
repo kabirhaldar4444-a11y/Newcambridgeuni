@@ -23,9 +23,9 @@ export default function Header({
   const handleCategoryClick = (catKey, e) => {
     e.preventDefault();
     setMegaMenuForceHide(true);
-    setTimeout(() => setMegaMenuForceHide(false), 450);
+    setTimeout(() => setMegaMenuForceHide(false), 500);
     if (onNavigatePrograms) {
-      onNavigatePrograms(catKey);
+      onNavigatePrograms(catKey, '', true);
     } else {
       if (onFilterCategory) onFilterCategory(catKey);
       if (onScrollToSection) onScrollToSection('programFinderSection');
@@ -35,7 +35,7 @@ export default function Header({
   const handleFeaturedClick = (e) => {
     e.preventDefault();
     setMegaMenuForceHide(true);
-    setTimeout(() => setMegaMenuForceHide(false), 450);
+    setTimeout(() => setMegaMenuForceHide(false), 500);
     if (onOpenProgramModal) {
       onOpenProgramModal('generative-ai-prompt-engineering-for-enterprise-workflows');
     }
@@ -71,14 +71,17 @@ export default function Header({
           <ul className="nav-list">
             
             {/* Programs Mega Menu */}
-            <li className="nav-item has-dropdown">
+            <li 
+              className="nav-item has-dropdown"
+              onMouseLeave={() => setMegaMenuForceHide(false)}
+            >
               <a 
                 href="/programs" 
                 className={`nav-link ${currentView === 'programs' ? 'active' : ''}`} 
                 onClick={(e) => {
                   e.preventDefault();
                   if (onNavigatePrograms) {
-                    onNavigatePrograms('all');
+                    onNavigatePrograms('all', '', false);
                   } else {
                     onScrollToSection('programFinderSection');
                   }
@@ -96,7 +99,7 @@ export default function Header({
                     <ul className="mega-links">
                       <li>
                         <a href="/programs" onClick={(e) => handleCategoryClick('all', e)}>
-                          <span className="link-icon">🎓</span> All Certifications (100)
+                          <span className="link-icon">🎓</span> All Certifications (155)
                         </a>
                       </li>
                       <li>

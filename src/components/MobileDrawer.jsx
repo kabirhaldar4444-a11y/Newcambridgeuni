@@ -20,7 +20,7 @@ export default function MobileDrawer({
     e.preventDefault();
     onClose();
     if (onNavigatePrograms) {
-      onNavigatePrograms(catId || 'all');
+      onNavigatePrograms(catId || 'all', '', true);
     } else if (onScrollToSection) {
       onScrollToSection('programFinderSection');
     }

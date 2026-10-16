@@ -9,7 +9,7 @@ export default function Footer({
   const handleCatClick = (catId, e) => {
     e.preventDefault();
     if (onNavigatePrograms) {
-      onNavigatePrograms(catId);
+      onNavigatePrograms(catId, '', true);
     } else {
       if (onFilterCategory) onFilterCategory(catId);
       if (onScrollToSection) onScrollToSection('programFinderSection');

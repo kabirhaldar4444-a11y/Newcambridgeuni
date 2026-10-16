@@ -48,7 +48,7 @@ const CATEGORY_ITEMS = [
 export default function CategoryGrid({ onFilterCategory, onScrollToSection, onNavigatePrograms }) {
   const handleClick = (catId) => {
     if (onNavigatePrograms) {
-      onNavigatePrograms(catId);
+      onNavigatePrograms(catId, '', true);
     } else {
       if (onFilterCategory) onFilterCategory(catId);
       if (onScrollToSection) onScrollToSection('programFinderSection');

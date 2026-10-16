@@ -34,7 +34,13 @@ export default function App() {
   });
 
   // Filter & Search State
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('category') || 'all';
+    }
+    return 'all';
+  });
   const [searchQuery, setSearchQuery] = useState('');
   const [sortMode, setSortMode] = useState('featured');
   const [priceFilter, setPriceFilter] = useState('all');
@@ -96,12 +102,22 @@ export default function App() {
     window.history.pushState({}, '', `/${filenames[policyKey] || ''}`);
   }, []);
 
-  const navigatePrograms = useCallback((category = 'all', query = '') => {
+  const navigatePrograms = useCallback((category = 'all', query = '', shouldScrollToFinder = false) => {
     setCurrentView('programs');
-    setActiveCategory(category || 'all');
+    const cat = category || 'all';
+    setActiveCategory(cat);
     setSearchQuery(query || '');
-    window.history.pushState({}, '', '/programs');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const url = cat !== 'all' ? `/programs?category=${encodeURIComponent(cat)}` : '/programs';
+    window.history.pushState({}, '', url);
+
+    if (shouldScrollToFinder || (cat && cat !== 'all')) {
+      setTimeout(() => {
+        performScroll('programFinderSection');
+      }, 70);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }, []);
 
   const navigateHome = useCallback(() => {
@@ -119,8 +135,13 @@ export default function App() {
       else if (path.includes('refund')) setCurrentView('refund');
       else if (path.includes('delivery')) setCurrentView('delivery');
       else if (path.includes('accessibility')) setCurrentView('accessibility');
-      else if (path.includes('programs')) setCurrentView('programs');
-      else setCurrentView('home');
+      else if (path.includes('programs')) {
+        setCurrentView('programs');
+        const params = new URLSearchParams(window.location.search);
+        setActiveCategory(params.get('category') || 'all');
+      } else {
+        setCurrentView('home');
+      }
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -131,7 +152,7 @@ export default function App() {
     if (currentView === 'home') {
       document.title = "Cambridge Learning Services | Online Certifications & Executive Programs";
     } else if (currentView === 'programs') {
-      document.title = "Course Catalogue (100 Programs) | Cambridge Learning Services";
+      document.title = "Course Catalogue (155 Programs) | Cambridge Learning Services";
     }
   }, [currentView]);
 
@@ -164,6 +185,9 @@ export default function App() {
     setSortMode('featured');
     setPriceFilter('all');
     setDurationFilter('all');
+    if (currentView === 'programs') {
+      window.history.pushState({}, '', '/programs');
+    }
   };
 
   const handleInquireCourse = (courseTitle) => {

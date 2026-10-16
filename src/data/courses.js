@@ -86,7 +86,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "generative-ai-prompt-engineering-for-enterprise-workflows",
     "title": "Generative AI Prompt Engineering for Enterprise Workflows",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -209,7 +209,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-powered-automation-for-small-business-operations",
     "title": "AI-Powered Automation for Small Business Operations",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹60,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -362,7 +362,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-driven-copywriting-marketing-content-generation",
     "title": "AI-Driven Copywriting & Marketing Content Generation",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹25,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -455,7 +455,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "using-ai-tools-for-market-research-data-synthesis",
     "title": "Using AI Tools for Market Research & Data Synthesis",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹35,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -578,7 +578,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-enhanced-video-editing-creative-media-production",
     "title": "AI-Enhanced Video Editing & Creative Media Production",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹40,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -701,7 +701,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "no-code-ai-agent-custom-chatbot-architecture",
     "title": "No-Code AI Agent & Custom Chatbot Architecture",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹55,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -854,7 +854,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-productivity-hacks-for-microsoft-office-google-workspace",
     "title": "AI Productivity Hacks for Microsoft Office & Google Workspace",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹15,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -947,7 +947,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "using-midjourney-dall-e-for-commercial-graphic-design",
     "title": "Using Midjourney & DALL-E for Commercial Graphic Design",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹28,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -1070,7 +1070,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-for-human-resource-operations-talent-sourcing",
     "title": "AI for Human Resource Operations & Talent Sourcing",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹38,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -1178,7 +1178,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "financial-analysis-budgeting-using-ai-assistance",
     "title": "Financial Analysis & Budgeting Using AI Assistance",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹50,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -1301,7 +1301,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-powered-sales-scraping-cold-email-automation",
     "title": "AI-Powered Sales Scraping & Cold Email Automation",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹30,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -1409,7 +1409,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "using-ai-for-supply-chain-optimization-inventory-planning",
     "title": "Using AI for Supply Chain Optimization & Inventory Planning",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹65,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -1562,7 +1562,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-coding-assistants-github-copilot-for-rapid-development",
     "title": "AI Coding Assistants (GitHub Copilot) for Rapid Development",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -1685,7 +1685,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "customer-support-automation-using-ai-helpdesk-tools",
     "title": "Customer Support Automation Using AI Helpdesk Tools",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹42,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -1838,7 +1838,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "ai-prompt-engineering-for-legal-compliance-documentation",
     "title": "AI Prompt Engineering for Legal & Compliance Documentation",
-    "category": "ai-modern-workflows",
+    "category": "ai-and-modern-workflows",
     "categoryName": "AI & Modern Workflows",
     "price": "₹70,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -1961,7 +1961,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-project-scheduling-basic-estimation",
     "title": "Construction Project Scheduling & Basic Estimation",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹50,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -2114,7 +2114,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-cost-estimation-quantity-surveying-basics",
     "title": "Construction Cost Estimation & Quantity Surveying Basics",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹60,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -2267,7 +2267,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "contract-administration-procurement-in-construction",
     "title": "Contract Administration & Procurement in Construction",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -2390,7 +2390,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-bill-checking-contractor-invoice-verification",
     "title": "Construction Bill Checking & Contractor Invoice Verification",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹12,500/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -2513,7 +2513,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "rate-analysis-construction-material-price-forecasting",
     "title": "Rate Analysis & Construction Material Price Forecasting",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹30,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -2606,7 +2606,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-risk-assessment-hazard-mitigation-strategies",
     "title": "Construction Risk Assessment & Hazard Mitigation Strategies",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹38,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -2714,7 +2714,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "tendering-bidding-commercial-bid-evaluation-frameworks",
     "title": "Tendering, Bidding & Commercial Bid Evaluation Frameworks",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹55,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -2837,7 +2837,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "real-estate-project-cost-control-budget-management",
     "title": "Real Estate Project Cost Control & Budget Management",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹70,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -2911,7 +2911,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-claim-management-dispute-resolution-prep",
     "title": "Construction Claim Management & Dispute Resolution Prep",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹80,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -2987,7 +2987,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "agile-frameworks-scrum-for-construction-management",
     "title": "Agile Frameworks & Scrum for Construction Management",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3063,7 +3063,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "subcontractor-management-site-logistics-mastery",
     "title": "Subcontractor Management & Site Logistics Mastery",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3139,7 +3139,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-micro-scheduling-daily-work-progress-tracking",
     "title": "Construction Micro-Scheduling & Daily Work Progress Tracking",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹25,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -3215,7 +3215,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "cash-flow-management-capital-allocation-for-builders",
     "title": "Cash Flow Management & Capital Allocation for Builders",
-    "category": "construction-project-management-billing",
+    "category": "construction-project-management-and-billing",
     "categoryName": "Construction: Project Management & Billing",
     "price": "₹65,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3291,7 +3291,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-site-operations-supervisor-foundations",
     "title": "Construction Site Operations & Supervisor Foundations",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹55,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -3367,7 +3367,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "heavy-equipment-fleet-management-operations",
     "title": "Heavy Equipment Fleet Management Operations",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹75,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -3443,7 +3443,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-quality-control-site-inspection-frameworks",
     "title": "Construction Quality Control & Site Inspection Frameworks",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹50,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -3519,7 +3519,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "site-layout-land-surveying-tools-levelling-operations",
     "title": "Site Layout, Land Surveying Tools & Levelling Operations",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹48,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3595,7 +3595,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-material-storage-waste-reduction-storekeeping",
     "title": "Construction Material Storage, Waste Reduction & Storekeeping",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹26,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3671,7 +3671,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "excavation-shoring-deep-foundation-site-coordination",
     "title": "Excavation, Shoring & Deep Foundation Site Coordination",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹50,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3747,7 +3747,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "scaffolding-safety-erection-control-high-rise-access-planning",
     "title": "Scaffolding Safety, Erection Control & High-Rise Access Planning",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹20,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -3823,7 +3823,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-site-water-management-dewatering-systems",
     "title": "Construction Site Water Management & Dewatering Systems",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹30,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3899,7 +3899,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "demolition-planning-structural-dismantling-salvage-management",
     "title": "Demolition Planning, Structural Dismantling & Salvage Management",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -3975,7 +3975,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "labour-productivity-management-on-site-performance-tracking",
     "title": "Labour Productivity Management & On-Site Performance Tracking",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹35,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -4051,7 +4051,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "temporary-structures-site-infrastructure-layout-planning",
     "title": "Temporary Structures & Site Infrastructure Layout Planning",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹40,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4127,7 +4127,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-site-utilities-temporary-power-water-setup",
     "title": "Construction Site Utilities & Temporary Power/Water Setup",
-    "category": "construction-site-operations-safety",
+    "category": "construction-site-operations-and-safety",
     "categoryName": "Construction: Site Operations & Safety",
     "price": "₹38,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4203,7 +4203,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "bim-building-information-modeling-software-coordination",
     "title": "BIM (Building Information Modeling) Software Coordination",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹1,10,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -4279,7 +4279,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "advanced-blueprint-architectural-drawing-interpretation",
     "title": "Advanced Blueprint & Architectural Drawing Interpretation",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹30,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4355,7 +4355,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "pre-engineered-building-peb-design-and-assembly-principles",
     "title": "Pre-Engineered Building (PEB) Design and Assembly Principles",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹80,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -4431,7 +4431,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "structural-drawing-verification-for-site-engineers",
     "title": "Structural Drawing Verification for Site Engineers",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹48,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4507,7 +4507,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "mep-mechanical-electrical-plumbing-drawing-coordination",
     "title": "MEP (Mechanical, Electrical, Plumbing) Drawing Coordination",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹65,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -4583,7 +4583,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "as-built-drawing-documentation-handover-report-drafting",
     "title": "As-Built Drawing Documentation & Handover Report Drafting",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹28,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4659,7 +4659,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "construction-standard-operating-procedure-sop-writing",
     "title": "Construction Standard Operating Procedure (SOP) Writing",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹40,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4735,7 +4735,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "digital-document-control-daily-progress-report-dpr-systems",
     "title": "Digital Document Control & Daily Progress Report (DPR) Systems",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹18,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -4811,7 +4811,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "using-excel-for-construction-bar-bending-schedules-bbs",
     "title": "Using Excel for Construction Bar Bending Schedules (BBS)",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹24,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -4887,7 +4887,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "revit-architecture-foundations-for-project-managers",
     "title": "Revit Architecture Foundations for Project Managers",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹60,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -4963,7 +4963,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "autocad-basics-for-construction-site-supervisors",
     "title": "AutoCAD Basics for Construction Site Supervisors",
-    "category": "construction-design-coordination-bim",
+    "category": "construction-design-coordination-and-bim",
     "categoryName": "Construction: Design Coordination & BIM",
     "price": "₹40,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5039,7 +5039,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "concrete-technology-modern-formwork-applications",
     "title": "Concrete Technology & Modern Formwork Applications",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹48,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5115,7 +5115,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "interior-fit-out-commercial-finishing-project-coordination",
     "title": "Interior Fit-Out & Commercial Finishing Project Coordination",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹70,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -5191,7 +5191,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "sustainable-building-materials-green-construction-intro",
     "title": "Sustainable Building Materials & Green Construction Intro",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹35,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5267,7 +5267,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "residential-property-development-foundations",
     "title": "Residential Property Development Foundations",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹1,20,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -5343,7 +5343,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "waterproofing-technology-materials-selection-application",
     "title": "Waterproofing Technology: Materials, Selection & Application",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5419,7 +5419,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "advanced-flooring-systems-tiling-project-inspection",
     "title": "Advanced Flooring Systems & Tiling Project Inspection",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹30,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5495,7 +5495,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "fa-ade-engineering-commercial-glazing-installation-systems",
     "title": "Façade Engineering & Commercial Glazing Installation Systems",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹75,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5571,7 +5571,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "precast-concrete-elements-manufacturing-erection-control",
     "title": "Precast Concrete Elements: Manufacturing & Erection Control",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹95,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -5647,7 +5647,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "drywall-partitioning-acoustic-insulation-project-coordination",
     "title": "Drywall Partitioning & Acoustic Insulation Project Coordination",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹38,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5723,7 +5723,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "road-pavement-construction-materials-field-execution",
     "title": "Road & Pavement Construction Materials & Field Execution",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹65,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -5799,7 +5799,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "building-structural-repair-retrofitting-rehabilitation-basics",
     "title": "Building Structural Repair, Retrofitting & Rehabilitation Basics",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹78,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -5875,7 +5875,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "landscape-construction-engineering-external-site-works",
     "title": "Landscape Construction Engineering & External Site Works",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹50,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -5951,7 +5951,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "smart-home-automation-iot-hardware-site-integration",
     "title": "Smart Home Automation & IoT Hardware Site Integration",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹90,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6027,7 +6027,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "modular-kitchen-wardrobe-joinery-project-management",
     "title": "Modular Kitchen & Wardrobe Joinery Project Management",
-    "category": "construction-materials-finishes-tech",
+    "category": "construction-materials-finishes-and-tech",
     "categoryName": "Construction: Materials, Finishes & Tech",
     "price": "₹55,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -6103,7 +6103,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "advanced-microsoft-excel-data-dashboarding-for-operations",
     "title": "Advanced Microsoft Excel & Data Dashboarding for Operations",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹20,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -6179,7 +6179,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "supply-chain-logistics-warehouse-inventory-management",
     "title": "Supply Chain Logistics & Warehouse Inventory Management",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹55,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6255,7 +6255,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "vendor-management-strategic-procurement-operations",
     "title": "Vendor Management & Strategic Procurement Operations",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -6331,7 +6331,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "agile-frameworks-scrum-basics-for-non-tech-operations",
     "title": "Agile Frameworks & Scrum Basics for Non-Tech Operations",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹35,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -6407,7 +6407,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "business-process-mapping-workflow-optimization-blueprint",
     "title": "Business Process Mapping & Workflow Optimization Blueprint",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹65,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6483,7 +6483,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "lean-six-sigma-foundations-for-operational-excellence",
     "title": "Lean Six Sigma Foundations for Operational Excellence",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹95,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6559,7 +6559,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "customer-success-operations-account-retention-strategies",
     "title": "Customer Success Operations & Account Retention Strategies",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹42,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -6635,7 +6635,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "key-account-management-client-relations-frameworks",
     "title": "Key Account Management & Client Relations Frameworks",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹50,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6711,7 +6711,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "project-management-essentials-for-operational-teams",
     "title": "Project Management Essentials for Operational Teams",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹55,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6787,7 +6787,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "enterprise-resource-planning-erp-software-navigation-basics",
     "title": "Enterprise Resource Planning (ERP) Software Navigation Basics",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹48,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -6863,7 +6863,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "data-analytics-for-operations-using-powerbi-and-tableau",
     "title": "Data Analytics for Operations Using PowerBI and Tableau",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹95,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -6939,7 +6939,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "quality-assurance-qa-and-process-control-frameworks",
     "title": "Quality Assurance (QA) and Process Control Frameworks",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹60,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7015,7 +7015,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "change-management-frameworks-for-operational-restructuring",
     "title": "Change Management Frameworks for Operational Restructuring",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹50,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -7091,7 +7091,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "business-continuity-planning-disaster-recovery-workflows",
     "title": "Business Continuity Planning & Disaster Recovery Workflows",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹70,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7167,7 +7167,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "cross-border-trade-logistics-custom-clearance-operations",
     "title": "Cross-Border Trade Logistics & Custom Clearance Operations",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹65,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7243,7 +7243,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "corporate-retail-operations-store-management-systems",
     "title": "Corporate Retail Operations & Store Management Systems",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹45,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7319,7 +7319,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "b2b-service-operations-management-client-sla-tracking",
     "title": "B2B Service Operations Management & Client SLA Tracking",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹40,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -7395,7 +7395,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "digital-product-operations-lifecycle-coordination",
     "title": "Digital Product Operations & Lifecycle Coordination",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹80,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7471,7 +7471,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "e-commerce-operations-supply-chain-fulfillment-tactics",
     "title": "E-Commerce Operations & Supply Chain Fulfillment Tactics",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹55,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7547,7 +7547,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "risk-mitigation-internal-control-audit-for-operations-managers",
     "title": "Risk Mitigation & Internal Control Audit for Operations Managers",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹1,25,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -7623,7 +7623,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "strategic-facility-optimization-resource-budgeting",
     "title": "Strategic Facility Optimization & Resource Budgeting",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹55,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -7699,7 +7699,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "root-cause-analysis-operational-bottleneck-troubleshooting",
     "title": "Root-Cause Analysis & Operational Bottleneck Troubleshooting",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹32,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -7775,7 +7775,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "operational-dashboard-design-performance-kpi-mapping",
     "title": "Operational Dashboard Design & Performance KPI Mapping",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹38,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -7851,7 +7851,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "b2b-client-onboarding-service-delivery-workflows",
     "title": "B2B Client Onboarding & Service Delivery Workflows",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹45,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -7927,7 +7927,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "fleet-logistics-optimization-last-mile-delivery-planning",
     "title": "Fleet Logistics Optimization & Last-Mile Delivery Planning",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹60,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -8003,7 +8003,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "corporate-standard-operating-procedure-sop-deployment",
     "title": "Corporate Standard Operating Procedure (SOP) Deployment",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹35,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -8079,7 +8079,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "incident-management-operational-escalation-engineering",
     "title": "Incident Management & Operational Escalation Engineering",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹30,000/-",
     "duration": "10 Days Maximum (Self-Paced)",
@@ -8155,7 +8155,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "agile-scaling-frameworks-for-cross-departmental-work",
     "title": "Agile Scaling Frameworks for Cross-Departmental Work",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹70,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -8231,7 +8231,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "third-party-logistics-3pl-vendor-performance-auditing",
     "title": "Third-Party Logistics (3PL) & Vendor Performance Auditing",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹50,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -8307,7 +8307,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "enterprise-assets-inventory-valuation-methodologies",
     "title": "Enterprise Assets & Inventory Valuation Methodologies",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹48,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -8383,7 +8383,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "predictive-capacity-planning-workforce-operations",
     "title": "Predictive Capacity Planning & Workforce Operations",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹65,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -8459,7 +8459,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "green-supply-chain-carbon-neutral-operations-basics",
     "title": "Green Supply Chain & Carbon-Neutral Operations Basics",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹42,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -8535,7 +8535,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "corporate-relocation-logistics-infrastructure-set-up",
     "title": "Corporate Relocation Logistics & Infrastructure Set Up",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹80,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -8611,7 +8611,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "digital-workspace-optimization-automation-for-admin-teams",
     "title": "Digital Workspace Optimization: Automation for Admin Teams",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹26,000/-",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -8687,7 +8687,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "crisis-operations-management-business-stabilization",
     "title": "Crisis Operations Management & Business Stabilization",
-    "category": "corporate-operations-logistics",
+    "category": "corporate-operations-and-logistics",
     "categoryName": "Corporate Operations & Logistics",
     "price": "₹95,000/-",
     "duration": "30 Days Maximum (Self-Paced)",
@@ -9237,7 +9237,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "certificateinbusinessmanagement",
     "title": "Certificate in Business Management",
-    "category": "business-management",
+    "category": "business-and-management",
     "categoryName": "Business & Management",
     "price": "₹ 35,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9316,7 +9316,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "certificateinleadershipteammanagement",
     "title": "Certificate in Leadership & Team Management",
-    "category": "business-management",
+    "category": "business-and-management",
     "categoryName": "Business & Management",
     "price": "₹ 38,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9395,7 +9395,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "certificateinprojectcoordination",
     "title": "Certificate in Project Coordination",
-    "category": "business-management",
+    "category": "business-and-management",
     "categoryName": "Business & Management",
     "price": "₹ 60,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9474,7 +9474,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "certificateinofficeadministration",
     "title": "Certificate in Office Administration",
-    "category": "business-management",
+    "category": "business-and-management",
     "categoryName": "Business & Management",
     "price": "₹ 30,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9553,7 +9553,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "certificateinbusinessoperations",
     "title": "Certificate in Business Operations",
-    "category": "business-management",
+    "category": "business-and-management",
     "categoryName": "Business & Management",
     "price": "₹ 34,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9632,7 +9632,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "certificateinsupervisoryskills",
     "title": "Certificate in Supervisory Skills",
-    "category": "business-management",
+    "category": "business-and-management",
     "categoryName": "Business & Management",
     "price": "₹ 30,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9711,7 +9711,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "advancedmsexcelcertification",
     "title": "Advanced MS Excel Certification",
-    "category": "productivity-office-skills",
+    "category": "productivity-and-office-skills",
     "categoryName": "Productivity & Office Skills",
     "price": "₹ 20,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9790,7 +9790,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "businesscommunicationcertification",
     "title": "Business Communication Certification",
-    "category": "productivity-office-skills",
+    "category": "productivity-and-office-skills",
     "categoryName": "Productivity & Office Skills",
     "price": "₹ 22,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9869,7 +9869,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "timemanagementproductivitycertification",
     "title": "Time Management & Productivity Certification",
-    "category": "productivity-office-skills",
+    "category": "productivity-and-office-skills",
     "categoryName": "Productivity & Office Skills",
     "price": "₹ 18,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -9948,7 +9948,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "professionalemailwritingcertification",
     "title": "Professional Email Writing Certification",
-    "category": "productivity-office-skills",
+    "category": "productivity-and-office-skills",
     "categoryName": "Productivity & Office Skills",
     "price": "₹ 15,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10027,7 +10027,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "officeproductivitycertification",
     "title": "Office Productivity Certification",
-    "category": "productivity-office-skills",
+    "category": "productivity-and-office-skills",
     "categoryName": "Productivity & Office Skills",
     "price": "₹ 19,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10106,7 +10106,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "datahandlingcertification",
     "title": "Data Handling Certification",
-    "category": "productivity-office-skills",
+    "category": "productivity-and-office-skills",
     "categoryName": "Productivity & Office Skills",
     "price": "₹ 24,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10185,7 +10185,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "digitalmarketingcertification",
     "title": "Digital Marketing Certification",
-    "category": "marketing-communication",
+    "category": "marketing-and-communication",
     "categoryName": "Marketing & Communication",
     "price": "₹ 95,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10264,7 +10264,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "socialmediamanagementcertification",
     "title": "Social Media Management Certification",
-    "category": "marketing-communication",
+    "category": "marketing-and-communication",
     "categoryName": "Marketing & Communication",
     "price": "₹ 12,500",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10343,7 +10343,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "contentwritingcertification",
     "title": "Content Writing Certification",
-    "category": "marketing-communication",
+    "category": "marketing-and-communication",
     "categoryName": "Marketing & Communication",
     "price": "₹ 20,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10422,7 +10422,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "customerrelationshipmanagementcertification",
     "title": "Customer Relationship Management Certification",
-    "category": "marketing-communication",
+    "category": "marketing-and-communication",
     "categoryName": "Marketing & Communication",
     "price": "₹ 26,500",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10501,7 +10501,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "brandcommunicationcertification",
     "title": "Brand Communication Certification",
-    "category": "marketing-communication",
+    "category": "marketing-and-communication",
     "categoryName": "Marketing & Communication",
     "price": "₹ 24,500",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10580,7 +10580,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "publicrelationscertification",
     "title": "Public Relations Certification",
-    "category": "marketing-communication",
+    "category": "marketing-and-communication",
     "categoryName": "Marketing & Communication",
     "price": "₹ 27,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10659,7 +10659,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "webdevelopmentcertification",
     "title": "Web Development Certification",
-    "category": "technology-digital-skills",
+    "category": "technology-and-digital-skills",
     "categoryName": "Technology & Digital Skills",
     "price": "₹ 1,20,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10738,7 +10738,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "computerapplicationscertification",
     "title": "Computer Applications Certification",
-    "category": "technology-digital-skills",
+    "category": "technology-and-digital-skills",
     "categoryName": "Technology & Digital Skills",
     "price": "₹ 10,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10817,7 +10817,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "itskillscertification",
     "title": "IT Skills Certification",
-    "category": "technology-digital-skills",
+    "category": "technology-and-digital-skills",
     "categoryName": "Technology & Digital Skills",
     "price": "₹ 28,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10896,7 +10896,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "digitalskillscertification",
     "title": "Digital Skills Certification",
-    "category": "technology-digital-skills",
+    "category": "technology-and-digital-skills",
     "categoryName": "Technology & Digital Skills",
     "price": "₹ 26,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -10975,7 +10975,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "basicprogrammingcertification",
     "title": "Basic Programming Certification",
-    "category": "technology-digital-skills",
+    "category": "technology-and-digital-skills",
     "categoryName": "Technology & Digital Skills",
     "price": "₹ 30,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -11054,7 +11054,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "websitemanagementcertification",
     "title": "Website Management Certification",
-    "category": "technology-digital-skills",
+    "category": "technology-and-digital-skills",
     "categoryName": "Technology & Digital Skills",
     "price": "₹ 29,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12160,7 +12160,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "self-confidencebuildingtraining",
     "title": "Self-Confidence Building Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 25,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12239,7 +12239,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "resiliencecoachtraining",
     "title": "Resilience Coach Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 15,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12318,7 +12318,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "motivationalspeakertraining",
     "title": "Motivational Speaker Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 45,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12397,7 +12397,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "bodylanguageexperttraining",
     "title": "Body Language Expert Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 75,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12476,7 +12476,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "personalbrandingstrategisttraining",
     "title": "Personal Branding Strategist Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 1,00,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12555,7 +12555,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "mindsetmasterytraining",
     "title": "Mindset Mastery Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 20,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12634,7 +12634,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "relationshipcoachingtraining",
     "title": "Relationship Coaching Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 25,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12713,7 +12713,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "decisionmakingmasterytraining",
     "title": "Decision Making Mastery Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 30,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12792,7 +12792,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "adaptiveleadershiptraining",
     "title": "Adaptive Leadership Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 25,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12871,7 +12871,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "aiproductivitypowerup",
     "title": "AI Productivity Power-Up",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 25,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -12950,7 +12950,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "theeverydayaitoolkit",
     "title": "The Everyday AI Toolkit",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 20,000",
     "duration": "20 Days Maximum (Self-Paced)",
@@ -13029,7 +13029,7 @@ export const CAMBRIDGE_CERTIFICATES = [
   {
     "id": "confidenceandcharismatraining",
     "title": "Confidence and Charisma Training",
-    "category": "leadership-executive-mastery",
+    "category": "leadership-and-executive-mastery",
     "categoryName": "Leadership & Executive Mastery",
     "price": "₹ 35,000",
     "duration": "20 Days Maximum (Self-Paced)",

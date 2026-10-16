@@ -25,6 +25,11 @@ function parseDurationDays(durStr) {
   return match ? parseInt(match[0], 10) : 0;
 }
 
+function normalizeCat(cat) {
+  if (!cat) return '';
+  return String(cat).toLowerCase().replace(/-and-/g, '-').trim();
+}
+
 export default function ProgramFinder({
   activeCategory,
   onSelectCategory,
@@ -43,8 +48,12 @@ export default function ProgramFinder({
 }) {
   const filteredCourses = useMemo(() => {
     return CAMBRIDGE_CERTIFICATES.filter((cert) => {
-      // Category filter
-      const matchesCat = activeCategory === 'all' || cert.category === activeCategory;
+      // Category filter (handles both canonical and normalized IDs)
+      const matchesCat =
+        !activeCategory ||
+        activeCategory === 'all' ||
+        cert.category === activeCategory ||
+        normalizeCat(cert.category) === normalizeCat(activeCategory);
 
       // Search query filter
       const query = searchQuery.toLowerCase().trim();
@@ -89,13 +98,15 @@ export default function ProgramFinder({
   }, [activeCategory, searchQuery, sortMode, priceFilter, durationFilter]);
 
   const hasActiveFilters =
-    activeCategory !== 'all' ||
+    (activeCategory && activeCategory !== 'all') ||
     searchQuery !== '' ||
     sortMode !== 'featured' ||
     priceFilter !== 'all' ||
     durationFilter !== 'all';
 
-  const activeCategoryObj = CATEGORIES.find((c) => c.id === activeCategory);
+  const activeCategoryObj = CATEGORIES.find(
+    (c) => c.id === activeCategory || (activeCategory !== 'all' && normalizeCat(c.id) === normalizeCat(activeCategory))
+  );
   const activeCategoryLabel = activeCategoryObj ? activeCategoryObj.label.replace(/\(\d+\)/, '').trim() : activeCategory;
 
   return (
@@ -137,19 +148,24 @@ export default function ProgramFinder({
 
             {/* Category Pills */}
             <div className="category-pills" id="categoryPillList" role="tablist">
-              {CATEGORIES.map((cat) => (
-                <button
-                  key={cat.id}
-                  type="button"
-                  className={`pill ${activeCategory === cat.id ? 'active' : ''}`}
-                  data-category={cat.id}
-                  role="tab"
-                  aria-selected={activeCategory === cat.id}
-                  onClick={() => onSelectCategory(cat.id)}
-                >
-                  {cat.label}
-                </button>
-              ))}
+              {CATEGORIES.map((cat) => {
+                const isActive =
+                  activeCategory === cat.id ||
+                  (activeCategory !== 'all' && normalizeCat(cat.id) === normalizeCat(activeCategory));
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    className={`pill ${isActive ? 'active' : ''}`}
+                    data-category={cat.id}
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => onSelectCategory(cat.id)}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
             </div>
 
             {/* Smart Filter & Sort Toolbar */}
