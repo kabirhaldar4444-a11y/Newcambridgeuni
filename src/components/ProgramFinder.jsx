@@ -44,6 +44,7 @@ export default function ProgramFinder({
   onResetFilters,
   onOpenProgramModal,
   onInquireCourse,
+  onEnrollCourse,
   onScrollToSection
 }) {
   const filteredCourses = useMemo(() => {
@@ -426,9 +427,10 @@ export default function ProgramFinder({
                     <button
                       type="button"
                       className="btn-quick-inquire"
-                      onClick={() => onInquireCourse(cert.title)}
+                      style={{ background: '#15803d', borderColor: '#15803d', color: '#fff' }}
+                      onClick={() => onEnrollCourse ? onEnrollCourse(cert) : onInquireCourse(cert.title)}
                     >
-                      Enroll Now
+                      Enroll & Pay
                     </button>
                   </div>
                 </article>

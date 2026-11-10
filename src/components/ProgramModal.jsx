@@ -1,7 +1,7 @@
 import React from 'react';
 import { CAMBRIDGE_CERTIFICATES } from '../data/courses';
 
-export default function ProgramModal({ programId, onClose, onScrollToSection }) {
+export default function ProgramModal({ programId, onClose, onScrollToSection, onEnrollCourse }) {
   if (!programId) return null;
 
   const cert = CAMBRIDGE_CERTIFICATES.find((c) => c.id === programId) || CAMBRIDGE_CERTIFICATES[0];
@@ -159,13 +159,24 @@ export default function ProgramModal({ programId, onClose, onScrollToSection }) 
             </p>
           </div>
 
-          <div className="modal-action-bar">
+          <div className="modal-action-bar" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <button 
               type="button" 
               className="btn-primary" 
+              style={{ background: 'linear-gradient(135deg, #15803d 0%, #166534 100%)', borderColor: '#15803d' }}
+              onClick={() => {
+                onClose();
+                if (onEnrollCourse) onEnrollCourse(cert);
+              }}
+            >
+              💳 Enroll & Pay Online ({cert.price})
+            </button>
+            <button 
+              type="button" 
+              className="btn-secondary" 
               onClick={handleRequestInfo}
             >
-              Request Syllabus & Pricing
+              Request Syllabus & Inquiry
             </button>
             <button 
               type="button" 

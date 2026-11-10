@@ -19,6 +19,7 @@ import VideoModal from './components/VideoModal';
 import Toast from './components/Toast';
 import BackToTop from './components/BackToTop';
 import PolicyView from './components/PolicyView';
+import CheckoutModal from './components/CheckoutModal';
 
 export default function App() {
   // Navigation / View State
@@ -52,6 +53,7 @@ export default function App() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [preselectedCourse, setPreselectedCourse] = useState('');
+  const [checkoutCourse, setCheckoutCourse] = useState(null);
 
   // Toast State
   const [toast, setToast] = useState({ message: '', visible: false });
@@ -125,6 +127,17 @@ export default function App() {
     window.history.pushState({}, '', '/');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
+  // Check for Payment redirect return
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('payment') === 'complete' || params.get('payment') === 'success') {
+        const orderId = params.get('order_id');
+        showToast(`🎉 Payment response received! Order ID: ${orderId || 'Processed'}. Verification underway.`);
+      }
+    }
+  }, [showToast]);
 
   // Sync back/forward button
   useEffect(() => {
@@ -322,6 +335,7 @@ export default function App() {
             onResetFilters={handleResetFilters}
             onOpenProgramModal={(id) => setSelectedProgramId(id)}
             onInquireCourse={handleInquireCourse}
+            onEnrollCourse={(course) => setCheckoutCourse(course)}
             onScrollToSection={scrollToSection}
           />
 
@@ -359,6 +373,15 @@ export default function App() {
         programId={selectedProgramId}
         onClose={() => setSelectedProgramId(null)}
         onScrollToSection={scrollToSection}
+        onEnrollCourse={(course) => setCheckoutCourse(course)}
+      />
+
+      {/* Instant Checkout & Payment Modal */}
+      <CheckoutModal
+        course={checkoutCourse}
+        isOpen={Boolean(checkoutCourse)}
+        onClose={() => setCheckoutCourse(null)}
+        onShowToast={showToast}
       />
 
       <VideoModal
