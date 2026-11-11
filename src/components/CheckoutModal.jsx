@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { evaluateCoupon } from '../data/coupons';
 
 export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) {
   if (!isOpen || !course) return null;
@@ -11,7 +12,7 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
     return isNaN(num) || num <= 0 ? 45000 : num;
   };
 
-  const amount = parseAmount(course.price);
+  const originalAmount = parseAmount(course.price);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -22,11 +23,73 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  // Coupon state
+  const [couponInput, setCouponInput] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState(null);
+  const [couponError, setCouponError] = useState('');
+  const [couponSuccess, setCouponSuccess] = useState('');
+
+  // Auto-detect promo/coupon query parameter from URL if present
+  useEffect(() => {
+    if (isOpen && typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlCoupon = params.get('coupon') || params.get('promo') || params.get('code');
+      if (urlCoupon && !appliedCoupon) {
+        const result = evaluateCoupon(urlCoupon, originalAmount);
+        if (result.isValid) {
+          setCouponInput(result.code);
+          setAppliedCoupon(result);
+          setCouponSuccess(result.message);
+          if (onShowToast) {
+            onShowToast(`🎟️ ${result.message}`);
+          }
+        }
+      }
+    }
+  }, [isOpen, originalAmount]);
+
+  // Compute final payable amount
+  const finalAmount = appliedCoupon ? appliedCoupon.finalPrice : originalAmount;
+  const savings = appliedCoupon ? Math.max(0, originalAmount - finalAmount) : 0;
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const handleApplyCoupon = (e) => {
+    if (e) e.preventDefault();
+    setCouponError('');
+    setCouponSuccess('');
+
+    if (!couponInput.trim()) {
+      setCouponError('Please enter a coupon code.');
+      return;
+    }
+
+    const result = evaluateCoupon(couponInput, originalAmount);
+    if (result.isValid) {
+      setAppliedCoupon(result);
+      setCouponSuccess(result.message);
+      if (onShowToast) {
+        onShowToast(`🎉 Coupon applied! Price is now ₹${result.finalPrice.toLocaleString('en-IN')}`);
+      }
+    } else {
+      setCouponError(result.message);
+      setAppliedCoupon(null);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponInput('');
+    setCouponError('');
+    setCouponSuccess('');
+    if (onShowToast) {
+      onShowToast('Coupon removed. Standard price restored.');
     }
   };
 
@@ -60,7 +123,8 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          amount,
+          amount: finalAmount,
+          couponCode: appliedCoupon ? appliedCoupon.code : undefined,
           courseId: course.id,
           courseTitle: course.title,
           customerName: formData.name.trim(),
@@ -149,7 +213,7 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
             border: '1px solid #e2e8f0',
             borderRadius: '12px',
             padding: '16px',
-            marginBottom: '20px'
+            marginBottom: '16px'
           }}>
             <span style={{ 
               fontSize: '0.75rem', 
@@ -172,17 +236,204 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
               <span style={{ fontSize: '0.85rem', color: '#64748b' }}>
                 ⏱️ {course.duration || 'Flexible Self-Paced'}
               </span>
-              <span style={{ 
-                fontSize: '1.3rem', 
-                fontWeight: 800, 
-                color: '#0f172a' 
-              }}>
-                ₹{amount.toLocaleString('en-IN')}
-              </span>
+              <div>
+                {appliedCoupon ? (
+                  <div style={{ textAlign: 'right' }}>
+                    <span style={{ 
+                      fontSize: '0.9rem', 
+                      color: '#94a3b8', 
+                      textDecoration: 'line-through',
+                      marginRight: '8px',
+                      fontWeight: 500
+                    }}>
+                      ₹{originalAmount.toLocaleString('en-IN')}
+                    </span>
+                    <span style={{ 
+                      fontSize: '1.35rem', 
+                      fontWeight: 800, 
+                      color: '#15803d' 
+                    }}>
+                      ₹{finalAmount.toLocaleString('en-IN')}
+                    </span>
+                  </div>
+                ) : (
+                  <span style={{ 
+                    fontSize: '1.3rem', 
+                    fontWeight: 800, 
+                    color: '#0f172a' 
+                  }}>
+                    ₹{originalAmount.toLocaleString('en-IN')}
+                  </span>
+                )}
+              </div>
             </div>
+
+            {/* Applied Coupon Info Banner inside summary */}
+            {appliedCoupon && (
+              <div style={{
+                marginTop: '12px',
+                paddingTop: '10px',
+                borderTop: '1px dashed #cbd5e1',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '0.82rem'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                  <span style={{
+                    background: '#dcfce7',
+                    color: '#166534',
+                    padding: '2px 8px',
+                    borderRadius: '4px',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    fontSize: '0.78rem'
+                  }}>
+                    🏷️ {appliedCoupon.code}
+                  </span>
+                  <span style={{ color: '#15803d', fontWeight: 600 }}>
+                    Savings: ₹{savings.toLocaleString('en-IN')}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleRemoveCoupon}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#ef4444',
+                    cursor: 'pointer',
+                    fontSize: '0.8rem',
+                    fontWeight: 600,
+                    textDecoration: 'underline'
+                  }}
+                >
+                  Remove
+                </button>
+              </div>
+            )}
           </div>
 
-          {/* Error Notice */}
+          {/* Smart Coupon Code Box */}
+          <div style={{
+            background: appliedCoupon ? '#f0fdf4' : '#ffffff',
+            border: appliedCoupon ? '1px solid #bbf7d0' : '1px solid #e2e8f0',
+            borderRadius: '12px',
+            padding: '14px',
+            marginBottom: '18px',
+            transition: 'all 0.2s ease'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+              <label 
+                htmlFor="checkoutCouponInput"
+                style={{ 
+                  fontSize: '0.84rem', 
+                  fontWeight: 600, 
+                  color: '#334155', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '6px' 
+                }}
+              >
+                <span>🎟️</span> Have a Coupon Code?
+              </label>
+              {appliedCoupon ? (
+                <span style={{ fontSize: '0.76rem', color: '#16a34a', fontWeight: 700 }}>
+                  ✓ ACTIVE DISCOUNT
+                </span>
+              ) : (
+                <span style={{ fontSize: '0.74rem', color: '#64748b' }}>
+                  Enter code & click Apply
+                </span>
+              )}
+            </div>
+
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <input
+                id="checkoutCouponInput"
+                type="text"
+                value={couponInput}
+                onChange={(e) => {
+                  setCouponInput(e.target.value);
+                  if (couponError) setCouponError('');
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleApplyCoupon();
+                  }
+                }}
+                placeholder="Enter coupon code"
+                disabled={Boolean(appliedCoupon)}
+                style={{
+                  flex: 1,
+                  padding: '9px 12px',
+                  borderRadius: '8px',
+                  border: couponError ? '1px solid #ef4444' : '1px solid #cbd5e1',
+                  fontSize: '0.9rem',
+                  outline: 'none',
+                  textTransform: 'uppercase',
+                  background: appliedCoupon ? '#f8fafc' : '#ffffff',
+                  color: '#1e293b'
+                }}
+              />
+              {appliedCoupon ? (
+                <button
+                  type="button"
+                  onClick={handleRemoveCoupon}
+                  style={{
+                    padding: '9px 16px',
+                    borderRadius: '8px',
+                    border: '1px solid #fca5a5',
+                    background: '#fef2f2',
+                    color: '#991b1b',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  Remove
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleApplyCoupon}
+                  disabled={!couponInput.trim()}
+                  style={{
+                    padding: '9px 18px',
+                    borderRadius: '8px',
+                    border: 'none',
+                    background: couponInput.trim() ? '#0f172a' : '#94a3b8',
+                    color: '#ffffff',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    cursor: couponInput.trim() ? 'pointer' : 'not-allowed',
+                    whiteSpace: 'nowrap',
+                    transition: 'background 0.2s ease'
+                  }}
+                >
+                  Apply
+                </button>
+              )}
+            </div>
+
+            {/* Error Message */}
+            {couponError && (
+              <div style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '7px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <span>⚠️</span> {couponError}
+              </div>
+            )}
+
+            {/* Success Message */}
+            {couponSuccess && !couponError && (
+              <div style={{ color: '#15803d', fontSize: '0.8rem', marginTop: '7px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <span>✅</span> {couponSuccess}
+              </div>
+            )}
+          </div>
+
+          {/* Payment Gateway Error Notice */}
           {errorMessage && (
             <div style={{
               background: '#fef2f2',
@@ -286,7 +537,11 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
                 disabled={isLoading}
                 style={{
                   flex: 1,
-                  background: isLoading ? '#94a3b8' : 'linear-gradient(135deg, #a81c1c 0%, #7f1d1d 100%)',
+                  background: isLoading 
+                    ? '#94a3b8' 
+                    : appliedCoupon 
+                      ? 'linear-gradient(135deg, #15803d 0%, #166534 100%)' 
+                      : 'linear-gradient(135deg, #a81c1c 0%, #7f1d1d 100%)',
                   color: '#ffffff',
                   padding: '13px 20px',
                   border: 'none',
@@ -298,7 +553,9 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '8px',
-                  boxShadow: '0 4px 12px rgba(168, 28, 28, 0.25)',
+                  boxShadow: appliedCoupon 
+                    ? '0 4px 12px rgba(22, 101, 52, 0.25)' 
+                    : '0 4px 12px rgba(168, 28, 28, 0.25)',
                   transition: 'all 0.2s ease'
                 }}
               >
@@ -309,7 +566,7 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
                   </>
                 ) : (
                   <>
-                    <span>Pay ₹{amount.toLocaleString('en-IN')} Securely</span> &rarr;
+                    <span>Pay ₹{finalAmount.toLocaleString('en-IN')} Securely</span> &rarr;
                   </>
                 )}
               </button>
@@ -342,4 +599,3 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
     </div>
   );
 }
-

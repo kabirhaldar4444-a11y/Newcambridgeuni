@@ -1,4 +1,17 @@
 // Vercel Serverless Function: Create Pay-In via Divine Pay
+
+// Supported coupon codes (normalized to lowercase)
+const VALID_COUPONS = {
+  cambridgetest10: {
+    price: 10,
+    code: 'cambridgetest10'
+  },
+  cambridgetest100: {
+    price: 100,
+    code: 'cambridgetest100'
+  }
+};
+
 export default async function handler(req, res) {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -29,14 +42,33 @@ export default async function handler(req, res) {
       });
     }
 
-    const { amount, courseTitle, customerName, customerEmail, customerPhone } = req.body || {};
+    const { amount, couponCode, courseTitle, customerName, customerEmail, customerPhone } = req.body || {};
 
-    const numericAmount = Number(amount);
+    let numericAmount = Number(amount);
+
+    // Validate and apply coupon code if provided
+    let appliedCoupon = null;
+    if (couponCode && typeof couponCode === 'string' && couponCode.trim()) {
+      const normalizedCode = couponCode.trim().toLowerCase();
+      const couponMatch = VALID_COUPONS[normalizedCode];
+
+      if (couponMatch) {
+        appliedCoupon = normalizedCode;
+        numericAmount = couponMatch.price;
+        console.log(`[DivinePay] Valid coupon "${normalizedCode}" applied. Overriding amount to ₹${numericAmount}`);
+      } else {
+        return res.status(400).json({
+          success: false,
+          message: `Coupon code "${couponCode.trim()}" is invalid or expired.`
+        });
+      }
+    }
+
     if (!numericAmount || isNaN(numericAmount) || numericAmount <= 0) {
       return res.status(400).json({ success: false, message: 'A valid numeric payment amount is required.' });
     }
 
-    console.log(`[DivinePay] Initiating Pay-In for ₹${numericAmount} (${customerName || 'Student'}, ${courseTitle || 'Course'})`);
+    console.log(`[DivinePay] Initiating Pay-In for ₹${numericAmount} (${customerName || 'Student'}, ${courseTitle || 'Course'}${appliedCoupon ? `, Coupon: ${appliedCoupon}` : ''})`);
 
     // Divine Pay exact API contract: only accepts { amount } with "x-api-key" header
     const response = await fetch(payinUrl, {
@@ -86,6 +118,8 @@ export default async function handler(req, res) {
       message: result?.message || 'Pay-in order created',
       orderId,
       paymentUrl,
+      appliedCoupon,
+      amount: numericAmount,
       data: result?.data
     });
   } catch (error) {
