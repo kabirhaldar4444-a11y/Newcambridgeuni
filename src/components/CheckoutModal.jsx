@@ -16,8 +16,7 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
 
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    phone: ''
+    email: ''
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -105,9 +104,6 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
     if (!formData.email.trim() || !emailRegex.test(formData.email.trim())) {
       newErrors.email = 'Please enter a valid email address.';
     }
-    if (!formData.phone.trim() || formData.phone.trim().length < 10) {
-      newErrors.phone = 'Please enter a valid 10-digit mobile number.';
-    }
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -128,8 +124,7 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
           courseId: course.id,
           courseTitle: course.title,
           customerName: formData.name.trim(),
-          customerEmail: formData.email.trim(),
-          customerPhone: formData.phone.trim()
+          customerEmail: formData.email.trim()
         })
       });
 
@@ -477,7 +472,7 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
               )}
             </div>
 
-            <div style={{ marginBottom: '14px' }}>
+            <div style={{ marginBottom: '20px' }}>
               <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#334155', marginBottom: '6px' }}>
                 Email Address (For Certificate & Course Access) *
               </label>
@@ -500,33 +495,6 @@ export default function CheckoutModal({ course, isOpen, onClose, onShowToast }) 
               {errors.email && (
                 <span style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '4px', display: 'block' }}>
                   {errors.email}
-                </span>
-              )}
-            </div>
-
-            <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#334155', marginBottom: '6px' }}>
-                Mobile Number (For Payment & UPI Confirmation) *
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                placeholder="e.g. 9876543210"
-                style={{
-                  width: '100%',
-                  padding: '11px 14px',
-                  borderRadius: '8px',
-                  border: errors.phone ? '1px solid #ef4444' : '1px solid #cbd5e1',
-                  fontSize: '0.95rem',
-                  outline: 'none',
-                  boxSizing: 'border-box'
-                }}
-              />
-              {errors.phone && (
-                <span style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '4px', display: 'block' }}>
-                  {errors.phone}
                 </span>
               )}
             </div>
