@@ -123,6 +123,10 @@ export const POLICY_DATA = {
       {
         title: "When fulfilment is complete",
         html: "<p>The purchased service is fulfilled when the learning files and video access have been made available for the agreed period and you have been given the promised assessment opportunity. Passing and certificate issuance remain subject to identity, submission and score requirements.</p>"
+      },
+      {
+        title: "Official Delivery Confirmation & Feedback",
+        html: "<p>Have you received your GST invoice, PDF study guides, and video lecture portal links? Please submit your official acknowledgment and quality rating through our verified protocol: <a href=\"/feedback\" style=\"color:#0b3824; font-weight:700; text-decoration:underline;\">Complete the Service Delivery Confirmation & Feedback Form &rarr;</a></p>"
       }
     ]
   },

@@ -7,6 +7,7 @@ export default function Header({
   onToggleMobileDrawer,
   onNavigateHome,
   onNavigatePrograms,
+  onNavigateFeedback,
   currentView
 }) {
   const [scrolled, setScrolled] = useState(false);

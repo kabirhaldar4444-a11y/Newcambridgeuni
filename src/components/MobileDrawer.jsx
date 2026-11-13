@@ -6,7 +6,8 @@ export default function MobileDrawer({
   onScrollToSection,
   onSearch,
   onNavigatePrograms,
-  onNavigatePolicy
+  onNavigatePolicy,
+  onNavigateFeedback
 }) {
   const [searchValue, setSearchValue] = useState('');
 
@@ -135,6 +136,15 @@ export default function MobileDrawer({
           <li>
             <a href="/accessibility-statement.html" className="drawer-link" onClick={(e) => handlePolicyClick('accessibility', e)}>
               Accessibility
+            </a>
+          </li>
+          <li>
+            <a href="/feedback" className="drawer-link" onClick={(e) => {
+              e.preventDefault();
+              onClose();
+              if (onNavigateFeedback) onNavigateFeedback();
+            }}>
+              📋 Delivery Confirmation &amp; Feedback
             </a>
           </li>
         </ul>

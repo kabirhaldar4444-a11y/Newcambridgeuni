@@ -20,6 +20,7 @@ import Toast from './components/Toast';
 import BackToTop from './components/BackToTop';
 import PolicyView from './components/PolicyView';
 import CheckoutModal from './components/CheckoutModal';
+import CustomerFeedbackPage from './components/CustomerFeedbackPage';
 
 export default function App() {
   // Navigation / View State
@@ -28,6 +29,7 @@ export default function App() {
     if (path.includes('privacy')) return 'privacy';
     if (path.includes('terms')) return 'terms';
     if (path.includes('refund')) return 'refund';
+    if (path.includes('feedback')) return 'feedback';
     if (path.includes('delivery')) return 'delivery';
     if (path.includes('accessibility')) return 'accessibility';
     if (path.includes('programs')) return 'programs';
@@ -128,6 +130,12 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  const navigateFeedback = useCallback(() => {
+    setCurrentView('feedback');
+    window.history.pushState({}, '', '/feedback');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   // Check for Payment redirect return
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -146,6 +154,7 @@ export default function App() {
       if (path.includes('privacy')) setCurrentView('privacy');
       else if (path.includes('terms')) setCurrentView('terms');
       else if (path.includes('refund')) setCurrentView('refund');
+      else if (path.includes('feedback')) setCurrentView('feedback');
       else if (path.includes('delivery')) setCurrentView('delivery');
       else if (path.includes('accessibility')) setCurrentView('accessibility');
       else if (path.includes('programs')) {
@@ -166,6 +175,8 @@ export default function App() {
       document.title = "Cambridge Learning Services | Online Certifications & Executive Programs";
     } else if (currentView === 'programs') {
       document.title = "Course Catalogue (155 Programs) | Cambridge Learning Services";
+    } else if (currentView === 'feedback') {
+      document.title = "Customer Service Delivery & Feedback | Cambridge Learning Services";
     }
   }, [currentView]);
 
@@ -219,6 +230,7 @@ export default function App() {
         onToggleMobileDrawer={() => setIsMobileDrawerOpen(true)}
         onNavigateHome={navigateHome}
         onNavigatePrograms={navigatePrograms}
+        onNavigateFeedback={navigateFeedback}
         currentView={currentView}
       />
 
@@ -230,6 +242,7 @@ export default function App() {
         onSearch={(term) => navigatePrograms('all', term)}
         onNavigatePrograms={navigatePrograms}
         onNavigatePolicy={navigatePolicy}
+        onNavigateFeedback={navigateFeedback}
       />
 
       {/* Main Content: Home, Programs, or Policy View */}
@@ -346,11 +359,17 @@ export default function App() {
             onNavigatePolicy={navigatePolicy}
           />
         </main>
+      ) : currentView === 'feedback' ? (
+        <CustomerFeedbackPage
+          onNavigateHome={navigateHome}
+          onShowToast={showToast}
+        />
       ) : (
         <PolicyView 
           policyKey={currentView} 
           onNavigatePolicy={navigatePolicy} 
           onNavigateHome={navigateHome} 
+          onNavigateFeedback={navigateFeedback}
         />
       )}
 
@@ -360,6 +379,7 @@ export default function App() {
         onScrollToSection={scrollToSection}
         onNavigatePrograms={navigatePrograms}
         onNavigatePolicy={navigatePolicy}
+        onNavigateFeedback={navigateFeedback}
       />
 
       {/* Modals & Overlays */}

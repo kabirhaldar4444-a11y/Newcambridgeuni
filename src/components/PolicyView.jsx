@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { POLICIES_HTML, POLICY_DATA } from '../data/policies';
 
-export default function PolicyView({ policyKey, onNavigatePolicy, onNavigateHome }) {
+export default function PolicyView({ policyKey, onNavigatePolicy, onNavigateHome, onNavigateFeedback }) {
   const currentKey = POLICY_DATA[policyKey] ? policyKey : 'terms';
   const htmlContent = POLICIES_HTML[currentKey] || POLICIES_HTML.terms;
 
@@ -56,6 +56,9 @@ export default function PolicyView({ policyKey, onNavigatePolicy, onNavigateHome
     } else if (href.includes('accessibility-statement.html') || href.includes('accessibility')) {
       e.preventDefault();
       if (onNavigatePolicy) onNavigatePolicy('accessibility');
+    } else if (href.includes('feedback')) {
+      e.preventDefault();
+      if (onNavigateFeedback) onNavigateFeedback();
     }
   };
 

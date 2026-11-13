@@ -4,7 +4,8 @@ export default function Footer({
   onFilterCategory, 
   onScrollToSection, 
   onNavigatePrograms,
-  onNavigatePolicy 
+  onNavigatePolicy,
+  onNavigateFeedback
 }) {
   const handleCatClick = (catId, e) => {
     e.preventDefault();
@@ -97,6 +98,17 @@ export default function Footer({
                   Corporate Operations & Logistics (35)
                 </a>
               </li>
+              <li>
+                <a 
+                  href="/feedback" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (onNavigateFeedback) onNavigateFeedback();
+                  }}
+                >
+                  Feedback
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -156,6 +168,13 @@ export default function Footer({
             <span className="sep">|</span>
             <a href="/accessibility-statement.html" onClick={(e) => handlePolicyClick('accessibility', e)}>
               Accessibility
+            </a>
+            <span className="sep">|</span>
+            <a href="/feedback" onClick={(e) => {
+              e.preventDefault();
+              if (onNavigateFeedback) onNavigateFeedback();
+            }}>
+              Delivery Confirmation &amp; Feedback
             </a>
           </div>
           <p className="copyright-notice">
